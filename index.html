@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>sam dot com</title>
+
+<!-- Stylesheets -->
+    <link rel="stylesheet" href="./src/css/base.css">
+    <link rel="stylesheet" href="./src/css/components.css">
+    <link rel="stylesheet" href="./src/css/layout.css">
+
+<!-- Components -->
+    <script type="module" src="/src/components/animation-slideshow.js"></script>
+
+</head>
+
+<body>
+    <main>
+        <div id="scroll-container">
+
+            <div id="content">
+                <div id="main-background">
+                    <img src="./src/assets/images/blackground/blackground1.webp" loading="eager" />
+                    <img src="./src/assets/images/blackground/blackground2.webp" loading="lazy" />
+                    <img src="./src/assets/images/blackground/blackground3.webp" loading="lazy" />
+                    <img src="./src/assets/images/blackground/blackground4.webp" loading="lazy" />
+                </div>
+
+                <div id="main-stack">
+
+<!-- Main Content Stack -->
+
+    <!-- Landing -->
+                    <div class="section" id="landing">
+                        <img id="landing-background" src="./src/assets/images/landing/landing page background.webp"
+                            loading="eager" />
+                        <img id="face-melt" src="./src/assets/images/landing/frame0001.webp" loading="eager" />
+                    </div>
+
+    <!-- About -->
+                    <div class="section" id="about">
+                        <img class="main-image" src="./src/assets/images/about/about me.webp" loading="lazy" />
+                        <img id="dancing-cubes" src="./src/assets/images/about/dancing cubes.gif" />
+                    </div>
+
+    <!-- Misc Works -->
+                    <div class="section" id="misc-works">
+                        <img class="main-image" src="./src/assets/images/misc-works/misc works background.webp" loading="lazy" />
+                        <img class="main-image" id="wiggle-man" src="./src/assets/images/misc-works/wiggle man.gif" loading="lazy" />
+                    </div>
+
+    <!-- Animation -->
+                    <div class="section" id="animation">
+                        <img class="main-image" src="./src/assets/images/animation/animation title.webp" />
+                        <animation-slideshow travel="1">
+
+                            <div class="animation-slide-content" style="position: relative; width: 100%; overflow: hidden;">
+                                <img style="position: absolute; height: 100%;" src="./src/assets/images/animation/animation- capstone layer1.webp" />
+                                <iframe style="position: absolute; height: 40%; aspect-ratio: 560 / 315;" src="https://www.youtube.com/embed/PuJg04sQkr4?si=X8uUKOEyh7LjnD5f" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img style="position: absolute; height: 100%; pointer-events: none;" src="./src/assets/images/animation/animation- capstone layer2.webp"/>
+                            </div>
+
+                            <div class="animation-slide-content" style="position: relative; width: 100%; overflow: hidden;">
+                                <img style="position: absolute; height: 100%;" src="./src/assets/images/animation/animation- showreel layer1.webp" />
+                                <iframe style="position: absolute; height: 40%; aspect-ratio: 560 / 315;" src="https://www.youtube.com/embed/sFh0ndhoTRg?si=oY8ui-fiicSPdjH0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img style="position: absolute; height: 100%; pointer-events: none;" src="./src/assets/images/animation/animation- showreel layer2.webp"/>
+                            </div>
+
+                            <div class="animation-slide-content" style="position: relative; width: 100%; overflow: hidden;">
+                                <img style="position: absolute; height: 100%;" src="./src/assets/images/animation/animation- bis layer1.webp" />
+                                <iframe style="position: absolute; height: 40%; aspect-ratio: 560 / 315;" src="https://www.youtube.com/embed/vk1nbv3U60E?si=mAqTC7qaMZlvjgIp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                                <img style="position: absolute; height: 100%; pointer-events: none;" src="./src/assets/images/animation/animation- bis layer2.webp"/>
+                            </div>
+
+                        </animation-slideshow>
+                    </div>
+
+                </div>
+            </div>
+
+            <div id="scroll-track">
+                <div id="scroll-thumb"></div>
+            </div>
+
+        </div>
+    </main>
+
+<!-- Misc. Scripts -->
+    <script src="./src/main.js"></script>
+    <script src="./src/scripts/scroll-bar.js"></script>
+    <script src="./src/scripts/melt-animation.js"></script>
+
+</body>
+
+</html>

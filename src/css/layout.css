@@ -1,0 +1,145 @@
+/* #region ---- Variables + Overhead ---- */
+
+:root {
+    --background-slice-width: 1920;
+    --background-slice-height: 3116;
+    --default-width: 86%;
+    --default-margin: calc((100% - var(--default-width)) / 2);
+    --scroll-width: 20px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#main-stack {
+    top: 0;
+    left: 0;
+    width: calc(100% - var(--scroll-width));
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    gap: 20vh;
+    overflow: hidden;
+}
+
+#main-stack *> {
+    position: relative;
+}
+
+.main-image, section {
+    width: 100%;
+}
+
+/* #endregion */
+/* #region ---- Background ---- */
+
+#main-background {
+    display: block;
+    width: 100%;
+}
+
+#main-background img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+/* #endregion */
+/* #region ---- Scroll Bar ---- */
+
+body {
+    margin: 0;
+    height: 100vh;
+    overflow: hidden;
+    /* still hide native scroll */
+}
+
+#scroll-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+#content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    /* viewport-sized scroll box */
+    overflow-y: auto;
+    /* now scrollable */
+}
+
+#scroll-track {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: var(--scroll-width);
+    height: 100%;
+    background: red;
+}
+
+#scroll-thumb {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    /* fixed height */
+    /* background: url('scrollbar-image.png') no-repeat center; */
+    background: blue;
+    background-size: contain;
+    cursor: grab;
+}
+
+/* #endregion */
+/* #region ---- Landing Section ---- */
+
+#landing {
+    width: 100%;
+    padding-top: 40px;
+}
+
+#landing-background {
+    width: var(--default-width);
+    margin-left: var(--default-margin);
+}
+
+#face-melt {
+    position: absolute;
+    width: 64%;
+    left: 18%;
+    top: 10vw;
+}
+
+/* #endregion */
+/* #region ---- About Section ---- */
+
+#dancing-cubes {
+    width: calc(var(--default-width) * 0.8);
+    margin-left: calc(var(--default-margin) + var(--default-width) * 0.1);
+    transform: translateY(-10vh);
+}
+
+/* #endregion */
+/* #region ---- Misc Works ---- */
+
+#misc-works {
+    position: relative;
+}
+
+#wiggle-man {
+    position: absolute;
+    z-index: 10;
+    transform: translateY(100%);
+    left: 0;
+    bottom: 0;
+    transform: translateY(40%);
+}
+
+/* #endregion */
+/* #region ---- Animation Section ---- */
+
+/* #endregion */
