@@ -1,7 +1,7 @@
 import { css, html } from "lit";
 import { InfiniteSlideshow } from "./infinite-slideshow.js";
 
-class AnimationSlideshow extends InfiniteSlideshow {
+export class AnimationSlideshow extends InfiniteSlideshow {
     static styles = [
         InfiniteSlideshow.styles,
         css`
@@ -22,17 +22,17 @@ class AnimationSlideshow extends InfiniteSlideshow {
             }
             #prev {
                 left: 10vw;
-                background-image: url("src/assets/images/animation/button left grey.webp");
+                background-image: url("src/images/animation/button left grey.webp");
             }
             #prev:hover {
-                background-image: url("src/assets/images/animation/button left red.webp");
+                background-image: url("src/images/animation/button left red.webp");
             }
             #next {
                 right: 10vw;
-                background-image: url("src/assets/images/animation/button right grey.webp");
+                background-image: url("src/images/animation/button right grey.webp");
             }
             #next:hover {
-                background-image: url("src/assets/images/animation/button right red.webp");
+                background-image: url("src/images/animation/button right red.webp");
             }
         `,
     ];

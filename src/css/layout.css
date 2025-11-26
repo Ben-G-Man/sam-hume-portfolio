@@ -5,7 +5,6 @@
     --background-slice-height: 3116;
     --default-width: 86%;
     --default-margin: calc((100% - var(--default-width)) / 2);
-    --scroll-width: 20px;
 }
 
 * {
@@ -14,11 +13,28 @@
     box-sizing: border-box;
 }
 
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-color: #101010;
+}
+
+main {
+    height: 100vh;
+    overflow: scroll;
+}
+
+img {
+    pointer-events: none;
+    user-select: none;
+}
+
+
 #main-stack {
     top: 0;
     left: 0;
-    width: calc(100% - var(--scroll-width));
-    position: absolute;
+    width: 100%;
+    position: relative;
     display: flex;
     flex-direction: column;
     gap: 20vh;
@@ -34,10 +50,12 @@ section {
     width: 100%;
 }
 
+
 /* #endregion */
 /* #region ---- Background ---- */
 
 #main-background {
+    position: absolute;
     display: block;
     width: 100%;
 }
@@ -48,51 +66,6 @@ section {
     height: auto;
     margin: 0;
     padding: 0;
-}
-
-/* #endregion */
-/* #region ---- Scroll Bar ---- */
-
-body {
-    margin: 0;
-    height: 100vh;
-    overflow: hidden;
-    /* still hide native scroll */
-}
-
-#scroll-container {
-    position: relative;
-    width: 100%;
-    height: 100vh;
-}
-
-#content {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    /* viewport-sized scroll box */
-    overflow-y: auto;
-    /* now scrollable */
-}
-
-#scroll-track {
-    position: fixed;
-    top: 0;
-    right: 0;
-    width: var(--scroll-width);
-    height: 100%;
-    background: red;
-}
-
-#scroll-thumb {
-    position: absolute;
-    width: 100%;
-    height: 100px;
-    /* fixed height */
-    /* background: url('scrollbar-image.png') no-repeat center; */
-    background: blue;
-    background-size: contain;
-    cursor: grab;
 }
 
 /* #endregion */
@@ -133,7 +106,7 @@ body {
 
 #wiggle-man {
     position: absolute;
-    z-index: 10;
+    z-index: 3;
     transform: translateY(100%);
     left: 0;
     bottom: 0;
@@ -169,6 +142,27 @@ body {
 }
 
 /* #endregion */
-/* #region ---- Animation Section ---- */
+/* #region ---- Links Section ---- */
+
+#links-container {
+    aspect-ratio: 2555 / 2110;
+    position: relative;
+    overflow: hidden;
+    width: 60vw;
+    margin-left: 20vw;
+}
+
+#inactive-region {
+    height: 53%;
+    width: 100%;
+    position: absolute;
+}
+
+blank-slice,
+interactive-slice {
+    height: 100%;
+    position: relative;
+    float: left;
+}
 
 /* #endregion */

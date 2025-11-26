@@ -1,11 +1,12 @@
 const img = document.getElementById("face-melt");
+const main = document.getElementsByTagName("main")[0];
 
 /* ---- Settings ---- */
 
 const startPos = window.innerHeight * 0.15;
-const endPos = window.innerHeight * 0.9;
-const frameCount = 9; 
-const maxFrameRate = 20;                 // FPS limit
+const endPos = window.innerHeight * 0.6;
+const frameCount = 9;
+const maxFrameRate = 20; // FPS limit
 const minFrameTime = 1000 / maxFrameRate;
 
 let targetFrame = 1;
@@ -13,7 +14,7 @@ let displayedFrame = 1;
 let lastFrameTime = 0;
 
 const currentFrame = (i) =>
-    `./src/assets/images/landing/frame${i.toString().padStart(4, "0")}.webp`;
+    `./src/images/landing/frame${i.toString().padStart(4, "0")}.webp`;
 
 function updateImage(index) {
     img.src = currentFrame(index);
@@ -22,8 +23,8 @@ function updateImage(index) {
 /* ------------------------------------------
    SCROLL HANDLER — only sets the targetFrame
 ------------------------------------------- */
-content.addEventListener("scroll", () => {
-    const scrollTop = content.scrollTop - startPos;
+main.addEventListener("scroll", () => {
+    const scrollTop = main.scrollTop - startPos;
     let scrollFraction = scrollTop / endPos;
 
     scrollFraction = Math.max(0, Math.min(1, scrollFraction));
@@ -43,7 +44,7 @@ function animate() {
     const now = performance.now();
 
     if (now - lastFrameTime < minFrameTime) return;
-    
+
     if (displayedFrame === targetFrame) return;
 
     if (displayedFrame < targetFrame) {

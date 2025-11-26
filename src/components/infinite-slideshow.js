@@ -77,7 +77,7 @@ export class InfiniteSlideshow extends LitElement {
         this.slidesContainer.appendChild(lastClone);
 
         // --- add real slides ---
-        this.userSlides.forEach(el => {
+        this.userSlides.forEach((el) => {
             const clone = el.cloneNode(true);
             clone.classList.add("slide");
             this.slidesContainer.appendChild(clone);
@@ -114,7 +114,11 @@ export class InfiniteSlideshow extends LitElement {
 
     // sanitize travel value
     adjustTravel() {
-        if (typeof this.travel !== "number" || this.travel <= 0 || this.travel > 1) {
+        if (
+            typeof this.travel !== "number" ||
+            this.travel <= 0 ||
+            this.travel > 1
+        ) {
             this.travel = 1;
         }
     }
@@ -122,15 +126,19 @@ export class InfiniteSlideshow extends LitElement {
     updateTransform(instant = false) {
         if (!this.slidesContainer) return;
 
-        this.slidesContainer.style.transition = instant ? "none" : "transform 0.25s ease";
-        this.slidesContainer.style.transform = `translateX(-${this.currentIndex * 100}%)`;
+        this.slidesContainer.style.transition = instant
+            ? "none"
+            : "transform 0.25s ease";
+        this.slidesContainer.style.transform = `translateX(-${
+            this.currentIndex * 100
+        }%)`;
     }
 
     handleTransitionEnd() {
         // Wrap from clone at start back to real last slide
         if (this.currentIndex < 1) {
             // Example: index = 0 or negative
-            this.currentIndex = this.totalSlides; 
+            this.currentIndex = this.totalSlides;
             this.updateTransform(true);
         }
 
