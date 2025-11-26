@@ -32,3 +32,5 @@ jobs:
           publish_branch: gh-pages
           force_orphan: true
           commit_message: "Automated deploy from GitHub Actions"
+          clean: true
+
