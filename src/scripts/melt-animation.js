@@ -14,7 +14,7 @@ let displayedFrame = 1;
 let lastFrameTime = 0;
 
 const currentFrame = (i) =>
-    `/https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/landing/frame${i
+    `https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/landing/frame${i
         .toString()
         .padStart(4, "0")}.webp`;
 
