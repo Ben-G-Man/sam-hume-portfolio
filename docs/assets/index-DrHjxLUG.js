@@ -71,17 +71,17 @@ var $t=Object.defineProperty;var _t=(r,t,e)=>t in r?$t(r,t,{enumerable:!0,config
             }
             #prev {
                 left: 10vw;
-                background-image: url("src/images/animation/button left grey.webp");
+                background-image: url("./images/animation/button left grey.webp");
             }
             #prev:hover {
-                background-image: url("src/images/animation/button left red.webp");
+                background-image: url("./images/animation/button left red.webp");
             }
             #next {
                 right: 10vw;
-                background-image: url("src/images/animation/button right grey.webp");
+                background-image: url("./images/animation/button right grey.webp");
             }
             #next:hover {
-                background-image: url("src/images/animation/button right red.webp");
+                background-image: url("./images/animation/button right red.webp");
             }
         `]);customElements.define("animation-slideshow",pt);class M extends S{constructor(){super()}}$(M,"styles",j`
         .slice {
