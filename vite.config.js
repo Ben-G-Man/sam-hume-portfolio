@@ -1,7 +1,10 @@
 import { defineConfig } from 'vite';
 
-export default defineConfig({
-  server: {
-    port: 3000
-  }
+export default defineConfig(({ mode }) => {
+  return {
+    base: mode === 'development' ? '/' : '/sam-hume-portfolio/',
+    build: {
+        outDir: 'docs'
+    }
+  }; deploy
 });
