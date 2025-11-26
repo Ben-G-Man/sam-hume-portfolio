@@ -1,4 +1,4 @@
-import { LitElement, html, css } from "lit";
+import { LitElement, html, css } from 'lit';
 
 export class InfiniteSlideshow extends LitElement {
     static properties = {
@@ -52,14 +52,14 @@ export class InfiniteSlideshow extends LitElement {
     `;
 
     firstUpdated() {
-        this.slidesContainer = this.renderRoot.querySelector(".slides");
+        this.slidesContainer = this.renderRoot.querySelector('.slides');
 
         this.userSlides = Array.from(this.children);
         this.totalSlides = this.userSlides.length;
 
         this.populateSlides();
 
-        this.slidesContainer.addEventListener("transitionend", () => {
+        this.slidesContainer.addEventListener('transitionend', () => {
             this.handleTransitionEnd();
         });
     }
@@ -67,25 +67,25 @@ export class InfiniteSlideshow extends LitElement {
     populateSlides() {
         if (!this.slidesContainer) return;
 
-        this.slidesContainer.innerHTML = "";
+        this.slidesContainer.innerHTML = '';
 
         if (this.totalSlides === 0) return;
 
         // --- create clone of last at head ---
         const lastClone = this.userSlides[this.totalSlides - 1].cloneNode(true);
-        lastClone.classList.add("slide");
+        lastClone.classList.add('slide');
         this.slidesContainer.appendChild(lastClone);
 
         // --- add real slides ---
         this.userSlides.forEach((el) => {
             const clone = el.cloneNode(true);
-            clone.classList.add("slide");
+            clone.classList.add('slide');
             this.slidesContainer.appendChild(clone);
         });
 
         // --- clone first at tail ---
         const firstClone = this.userSlides[0].cloneNode(true);
-        firstClone.classList.add("slide");
+        firstClone.classList.add('slide');
         this.slidesContainer.appendChild(firstClone);
 
         // snap into position
@@ -115,7 +115,7 @@ export class InfiniteSlideshow extends LitElement {
     // sanitize travel value
     adjustTravel() {
         if (
-            typeof this.travel !== "number" ||
+            typeof this.travel !== 'number' ||
             this.travel <= 0 ||
             this.travel > 1
         ) {
@@ -127,8 +127,8 @@ export class InfiniteSlideshow extends LitElement {
         if (!this.slidesContainer) return;
 
         this.slidesContainer.style.transition = instant
-            ? "none"
-            : "transform 0.25s ease";
+            ? 'none'
+            : 'transform 0.25s ease';
         this.slidesContainer.style.transform = `translateX(-${
             this.currentIndex * 100
         }%)`;
@@ -155,8 +155,8 @@ export class InfiniteSlideshow extends LitElement {
 
     render() {
         return html`
-            <div class="viewport">
-                <div class="slides"></div>
+            <div class='viewport'>
+                <div class='slides'></div>
             </div>
 
             ${this.renderExtraContent()}
@@ -164,4 +164,4 @@ export class InfiniteSlideshow extends LitElement {
     }
 }
 
-customElements.define("infinite-slideshow", InfiniteSlideshow);
+customElements.define('infinite-slideshow', InfiniteSlideshow);

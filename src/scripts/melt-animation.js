@@ -1,5 +1,5 @@
-const img = document.getElementById("face-melt");
-const main = document.getElementsByTagName("main")[0];
+const img = document.getElementById('face-melt');
+const main = document.getElementsByTagName('main')[0];
 
 /* ---- Settings ---- */
 
@@ -14,9 +14,9 @@ let displayedFrame = 1;
 let lastFrameTime = 0;
 
 const currentFrame = (i) =>
-    `/sam-hume-portfolio/images/landing/frame${i.toString().padStart(4, "0")}.webp`;
+    `/sam-hume-portfolio/images/landing/frame${i.toString().padStart(4, '0')}.webp`;
 
-console.log("Welcome to the Sam Site (TM)! Don't touch anything, this site is built on fragile hopes and dreams.");
+console.log('Welcome to the Sam Site (TM)! Don\'t touch anything, this site is built on fragile hopes and dreams.');
 
 function updateImage(index) {
     img.src = currentFrame(index);
@@ -25,7 +25,7 @@ function updateImage(index) {
 /* ------------------------------------------
    SCROLL HANDLER — only sets the targetFrame
 ------------------------------------------- */
-main.addEventListener("scroll", () => {
+main.addEventListener('scroll', () => {
     const scrollTop = main.scrollTop - startPos;
     let scrollFraction = scrollTop / endPos;
 
