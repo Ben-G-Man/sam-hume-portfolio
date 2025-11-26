@@ -41,7 +41,7 @@ img {
     overflow: hidden;
 }
 
-#main-stack > * {
+#main-stack>* {
     position: relative;
 }
 

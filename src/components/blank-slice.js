@@ -1,5 +1,5 @@
-import { html } from 'lit';
-import { Slice } from './slice.js';
+import { html } from "lit";
+import { Slice } from "./slice.js";
 
 export class BlankSlice extends Slice {
     static properties = {
@@ -12,11 +12,15 @@ export class BlankSlice extends Slice {
 
     render() {
         return html`
-            <div class='slice'>
-                <img class='slice-back' src='${this.imagePath}' />
+            <div class="slice">
+                <img
+                    class="slice-back"
+                    src="${this.imagePath}"
+                    loading="lazy"
+                />
             </div>
         `;
     }
 }
 
-customElements.define('blank-slice', BlankSlice);
+customElements.define("blank-slice", BlankSlice);

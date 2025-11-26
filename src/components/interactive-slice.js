@@ -1,5 +1,5 @@
-import { html, css } from 'lit';
-import { Slice } from './slice.js';
+import { html, css } from "lit";
+import { Slice } from "./slice.js";
 
 export class InteractiveSlice extends Slice {
     static properties = {
@@ -45,15 +45,20 @@ export class InteractiveSlice extends Slice {
 
     render() {
         return html`
-            <a class='slice interactive' target='_blank' href='${this.link}'>
+            <a class="slice interactive" target="_blank" href="${this.link}">
                 <img
-                    class='slice-back'
-                    src='${this.imagePath.replace(/(\.[^/.]+)$/, '-hover$1')}'
+                    class="slice-back"
+                    src="${this.imagePath.replace(/(\.[^/.]+)$/, "-hover$1")}"
+                    loading="lazy"
                 />
-                <img class='slice-front' src='${this.imagePath}' />
+                <img
+                    class="slice-front"
+                    src="${this.imagePath}"
+                    loading="lazy"
+                />
             </a>
         `;
     }
 }
 
-customElements.define('interactive-slice', InteractiveSlice);
+customElements.define("interactive-slice", InteractiveSlice);

@@ -1,4 +1,4 @@
-import { LitElement, html, css } from 'lit';
+import { LitElement, html, css } from "lit";
 
 export class Slice extends LitElement {
     constructor() {
@@ -19,4 +19,4 @@ export class Slice extends LitElement {
     `;
 }
 
-customElements.define('basic-slice', Slice);
+customElements.define("basic-slice", Slice);

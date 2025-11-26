@@ -1,5 +1,5 @@
-import { defineConfig } from 'vite'
+import { defineConfig } from "vite";
 
 export default defineConfig(({ mode }) => ({
-  base: mode === 'development' ? '/' : '/sam-hume-portfolio/',
+    base: mode === "development" ? "/" : "/sam-hume-portfolio/",
 }));
