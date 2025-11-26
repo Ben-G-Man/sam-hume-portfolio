@@ -22,17 +22,17 @@ export class AnimationSlideshow extends InfiniteSlideshow {
             }
             #prev {
                 left: 10vw;
-                background-image: url("src/images/animation/button left grey.webp");
+                background-image: url("/images/animation/button left grey.webp");
             }
             #prev:hover {
-                background-image: url("src/images/animation/button left red.webp");
+                background-image: url("/images/animation/button left red.webp");
             }
             #next {
                 right: 10vw;
-                background-image: url("src/images/animation/button right grey.webp");
+                background-image: url("/images/animation/button right grey.webp");
             }
             #next:hover {
-                background-image: url("src/images/animation/button right red.webp");
+                background-image: url("/images/animation/button right red.webp");
             }
         `,
     ];

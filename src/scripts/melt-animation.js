@@ -14,7 +14,7 @@ let displayedFrame = 1;
 let lastFrameTime = 0;
 
 const currentFrame = (i) =>
-    `./src/images/landing/frame${i.toString().padStart(4, "0")}.webp`;
+    `/images/landing/frame${i.toString().padStart(4, "0")}.webp`;
 
 function updateImage(index) {
     img.src = currentFrame(index);
