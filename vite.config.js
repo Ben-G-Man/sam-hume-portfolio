@@ -1,8 +1,10 @@
 import { defineConfig } from 'vite';
 
-export default defineConfig({
-    base: '/sam-hume-portfolio/',
+export default defineConfig(({ mode }) => {
+  return {
+    base: mode === 'development' ? '/' : '/sam-hume-portfolio/',
     build: {
         outDir: 'docs'
     }
+  };
 });
