@@ -22,17 +22,17 @@ export class AnimationSlideshow extends InfiniteSlideshow {
             }
             #prev {
                 left: 10vw;
-                background-image: url("/sam-hume-portfolio/images/animation/button-left-grey.webp");
+                background-image: url("/sam-hume-portfoliohttps://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/button-left-grey.webp");
             }
             #prev:hover {
-                background-image: url("/sam-hume-portfolio/images/animation/button-left-red.webp");
+                background-image: url("/sam-hume-portfoliohttps://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/button-left-red.webp");
             }
             #next {
                 right: 10vw;
-                background-image: url("/sam-hume-portfolio/images/animation/button-right-grey.webp");
+                background-image: url("/sam-hume-portfoliohttps://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/button-right-grey.webp");
             }
             #next:hover {
-                background-image: url("/sam-hume-portfolio/images/animation/button-right-red.webp");
+                background-image: url("/sam-hume-portfoliohttps://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/button-right-red.webp");
             }
         `,
     ];
