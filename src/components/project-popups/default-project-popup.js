@@ -28,7 +28,7 @@ export class DefaultProjectPopup extends ProjectPopup {
 
     renderExtraContent() {
         return html`
-            <img class="work-text" src="${this.textImagePath}" />
+            <img loading="lazy" class="work-text" src="${this.textImagePath}" />
         `;
     }
 }

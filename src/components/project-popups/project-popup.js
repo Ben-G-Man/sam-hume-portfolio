@@ -43,7 +43,7 @@ export class ProjectPopup extends LitElement {
     render() {
         return html`
             <div>
-                <img id="background" src='./public/images/project-popups/background-lined-paper.webp' />
+                <img loading="lazy" id="background" src='./public/images/project-popups/background-lined-paper.webp' />
                 <div id="exit-button" onclick="ClosePopup()"></div>
                 ${this.renderExtraContent()}
             </div>
