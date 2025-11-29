@@ -16,7 +16,6 @@ export class InfiniteSlideshow extends LitElement {
         this.userSlides = [];
     }
 
-    // Subclasses override this to add UI
     renderExtraContent() {
         return html``;
     }

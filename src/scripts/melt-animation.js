@@ -18,10 +18,6 @@ const currentFrame = (i) =>
         .toString()
         .padStart(4, "0")}.webp`;
 
-console.log(
-    "Welcome to the Sam Site (TM)! Don't touch anything. This site is built on fragile hopes and dreams."
-);
-
 function updateImage(index) {
     img.src = currentFrame(index);
 }
