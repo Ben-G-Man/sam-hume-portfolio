@@ -34,6 +34,7 @@ export class ImageSlideshow extends LitElement {
         .prevImagePathHover=${this.prevImagePathHover}
         .nextImagePath=${this.nextImagePath}
         .nextImagePathHover=${this.nextImagePathHover}
+        buttonSpacing="0"
         travel="${this.travel}"
         >
         ${this.images.map(

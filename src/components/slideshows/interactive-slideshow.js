@@ -7,6 +7,7 @@ export class InteractiveSlideshow extends DefaultSlideshow {
         prevImagePathHover: { type: String },
         nextImagePath: { type: String },
         nextImagePathHover: { type: String },
+        buttonSpacing: { type: String },
     };
 
     constructor() {
@@ -19,6 +20,7 @@ export class InteractiveSlideshow extends DefaultSlideshow {
             "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/button-right-grey.webp";
         this.nextImagePathHover =
             "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/button-right-red.webp";
+        this.buttonSpacing = "10vw";
     }
 
     static styles = [
@@ -44,7 +46,7 @@ export class InteractiveSlideshow extends DefaultSlideshow {
             }
 
             #prev {
-                left: 10vw;
+                left: var(--button-spacing);
                 background-image: var(--prev-img);
             }
 
@@ -53,7 +55,7 @@ export class InteractiveSlideshow extends DefaultSlideshow {
             }
 
             #next {
-                right: 10vw;
+                right: var(--button-spacing);
                 background-image: var(--next-img);
             }
 
@@ -71,6 +73,7 @@ export class InteractiveSlideshow extends DefaultSlideshow {
                 style="
                     --prev-img: url(${this.prevImagePath});
                     --prev-hover: url(${this.prevImagePathHover});
+                    --button-spacing: ${this.buttonSpacing};
                 "
             ></button>
 
@@ -80,6 +83,7 @@ export class InteractiveSlideshow extends DefaultSlideshow {
                 style="
                     --next-img: url(${this.nextImagePath});
                     --next-hover: url(${this.nextImagePathHover});
+                    --button-spacing: ${this.buttonSpacing};
                 "
             ></button>
         `;
