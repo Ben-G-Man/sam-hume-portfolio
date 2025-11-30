@@ -3,6 +3,7 @@ import { LitElement, html, css } from "lit";
 export class ImageSlideshow extends LitElement {
     static properties = {
         images: { type: Array },
+        travel: { type: Number },
     };
 
     constructor() {
@@ -15,6 +16,7 @@ export class ImageSlideshow extends LitElement {
             "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow-R1.webp";
         this.nextImagePathHover =
             "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow-R2.webp";
+        this.travel = 1;
     }
 
     static styles = css`
@@ -32,6 +34,7 @@ export class ImageSlideshow extends LitElement {
         .prevImagePathHover=${this.prevImagePathHover}
         .nextImagePath=${this.nextImagePath}
         .nextImagePathHover=${this.nextImagePathHover}
+        travel="${this.travel}"
         >
         ${this.images.map(
             (imageUrl) =>

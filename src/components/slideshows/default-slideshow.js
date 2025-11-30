@@ -125,7 +125,7 @@ export class DefaultSlideshow extends LitElement {
 
     setSlide(newIndex) {
         if (this.isTransitioning || this.totalSlides === 0) return;
-        if (!this.looping && (newIndex < 0 || newIndex >= this.totalSlides)) return;
+        if (!this.looping && (newIndex < 0 || newIndex >= this.totalSlides - this.travel)) return;
         this.adjustTravel();
         this.isTransitioning = true;
         this.currentIndex = newIndex;
@@ -157,13 +157,13 @@ export class DefaultSlideshow extends LitElement {
     handleTransitionEnd() {
         if (this.looping) {
             // Wrap from clone at start back to real last slide
-            if (this.currentIndex < 1) {
+            if (this.currentIndex < this.travel) {
                 this.currentIndex = this.totalSlides;
                 this.updateTransform(true);
             }
 
             // Wrap from clone at end to real first slide
-            else if (this.currentIndex > this.totalSlides) {
+            else if (this.currentIndex > this.totalSlides + 1 - this.travel) {
                 this.currentIndex = 1;
                 this.updateTransform(true);
             }

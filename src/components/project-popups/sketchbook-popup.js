@@ -8,9 +8,9 @@ export class SketchbookPopup extends ProjectPopup {
     super();
 
     this.slideshowImages = [
-      "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/sketchbooks/sketchbook-slice-1.webp",
-      "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/sketchbooks/sketchbook-slice-2.webp",
-      "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/sketchbooks/sketchbook-slice-3.webp"
+      "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/sketchbooks/sb-1.webp",
+      "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/sketchbooks/sb-2.webp",
+      "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/sketchbooks/sb-3.webp"
     ];
   }
 
@@ -26,8 +26,9 @@ export class SketchbookPopup extends ProjectPopup {
         }
         
         image-slideshow {
-            height: 80%;
-            aspect-ratio: 800 / 1946;
+            margin-left: 10%;
+            width: 80%;
+            aspect-ratio: 1946 / 800;
         }
     `
   ];
