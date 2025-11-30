@@ -27,7 +27,6 @@ function ClosePopup() {
   popupBackground.classList.remove(openClassName);
 }
 
-// ✅ Wait until DOM is ready
 document.addEventListener("DOMContentLoaded", () => {
   popupBackground = document.getElementById("blur");
 
@@ -35,7 +34,6 @@ document.addEventListener("DOMContentLoaded", () => {
     console.error("Blur background not found!");
   }
 
-  // ✅ Explicitly expose to global scope
   window.OpenPopup = OpenPopup;
   window.ClosePopup = ClosePopup;
 });

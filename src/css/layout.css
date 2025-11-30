@@ -160,10 +160,10 @@ section {
     height: 100%;
     object-fit: cover;
     display: block;
+    pointer-events: all;
 }
 
 .image-grid img:not(.wip) {
-    pointer-events: all;
     cursor: pointer;
     filter: grayscale(100%);
     transition: 0.3s;
@@ -172,6 +172,17 @@ section {
 .image-grid img:not(.wip):hover {
     filter: grayscale(0%);
     transition: 0.3s;
+}
+
+.image-grid img.wip {
+    cursor: not-allowed;
+}
+
+/* #endregion */
+/* #region ---- Animation Section ---- */
+
+.animation-slideshow {
+    aspect-ratio: 2 / 1;
 }
 
 /* #endregion */

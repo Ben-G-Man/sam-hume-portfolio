@@ -23,11 +23,20 @@ export class DefaultProjectPopup extends ProjectPopup {
                     left: 0;
                     top: 0;
                 }
+
+                #background {
+                    height: 90%;
+                    position: absolute;
+                    top: 5%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
             `,
     ]
 
     renderExtraContent() {
         return html`
+            <img loading="lazy" id="background" src='https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/background-lined-paper.webp' />
             <img loading="lazy" class="work-text" src="${this.textImagePath}" />
         `;
     }

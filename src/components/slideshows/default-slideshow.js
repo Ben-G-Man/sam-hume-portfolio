@@ -1,14 +1,16 @@
 import { LitElement, html, css } from "lit";
 
-export class InfiniteSlideshow extends LitElement {
+export class DefaultSlideshow extends LitElement {
     static properties = {
         currentIndex: { type: Number },
         travel: { type: Number },
+        looping: { type: Boolean },
     };
 
     constructor() {
         super();
-        this.currentIndex = 1;
+        this.looping = false;
+        this.currentIndex = this.looping ? 1 : 0;
         this.travel = 1;
         this.totalSlides = 0;
         this.isTransitioning = false;
@@ -48,6 +50,24 @@ export class InfiniteSlideshow extends LitElement {
             justify-content: center;
             align-items: center;
         }
+            
+        .imageSlide {
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .imageSlide img {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+            pointer-events: none;
+        }
     `;
 
     firstUpdated() {
@@ -70,10 +90,12 @@ export class InfiniteSlideshow extends LitElement {
 
         if (this.totalSlides === 0) return;
 
-        // --- create clone of last at head ---
-        const lastClone = this.userSlides[this.totalSlides - 1].cloneNode(true);
-        lastClone.classList.add("slide");
-        this.slidesContainer.appendChild(lastClone);
+        if (this.looping) {
+            // --- create clone of last at head ---
+            const lastClone = this.userSlides[this.totalSlides - 1].cloneNode(true);
+            lastClone.classList.add("slide");
+            this.slidesContainer.appendChild(lastClone);
+        }
 
         // --- add real slides ---
         this.userSlides.forEach((el) => {
@@ -82,32 +104,31 @@ export class InfiniteSlideshow extends LitElement {
             this.slidesContainer.appendChild(clone);
         });
 
-        // --- clone first at tail ---
-        const firstClone = this.userSlides[0].cloneNode(true);
-        firstClone.classList.add("slide");
-        this.slidesContainer.appendChild(firstClone);
+        if (this.looping) {
+            // --- clone first at tail ---
+            const firstClone = this.userSlides[0].cloneNode(true);
+            firstClone.classList.add("slide");
+            this.slidesContainer.appendChild(firstClone);
+        }
 
         // snap into position
         this.updateTransform(true);
     }
 
     prevSlide() {
-        if (this.isTransitioning || this.totalSlides === 0) return;
-
-        this.adjustTravel();
-        this.isTransitioning = true;
-
-        this.currentIndex -= this.travel;
-        this.updateTransform();
+        this.setSlide(this.currentIndex - this.travel);
     }
 
     nextSlide() {
-        if (this.isTransitioning || this.totalSlides === 0) return;
+        this.setSlide(this.currentIndex + this.travel);
+    }
 
+    setSlide(newIndex) {
+        if (this.isTransitioning || this.totalSlides === 0) return;
+        if (!this.looping && (newIndex < 0 || newIndex >= this.totalSlides)) return;
         this.adjustTravel();
         this.isTransitioning = true;
-
-        this.currentIndex += this.travel;
+        this.currentIndex = newIndex;
         this.updateTransform();
     }
 
@@ -134,18 +155,18 @@ export class InfiniteSlideshow extends LitElement {
     }
 
     handleTransitionEnd() {
-        // Wrap from clone at start back to real last slide
-        if (this.currentIndex < 1) {
-            // Example: index = 0 or negative
-            this.currentIndex = this.totalSlides;
-            this.updateTransform(true);
-        }
+        if (this.looping) {
+            // Wrap from clone at start back to real last slide
+            if (this.currentIndex < 1) {
+                this.currentIndex = this.totalSlides;
+                this.updateTransform(true);
+            }
 
-        // Wrap from clone at end to real first slide
-        else if (this.currentIndex > this.totalSlides) {
-            // Example: totalSlides = 5, index = 6
-            this.currentIndex = 1;
-            this.updateTransform(true);
+            // Wrap from clone at end to real first slide
+            else if (this.currentIndex > this.totalSlides) {
+                this.currentIndex = 1;
+                this.updateTransform(true);
+            }
         }
 
         // Now transitions allowed again
@@ -163,4 +184,4 @@ export class InfiniteSlideshow extends LitElement {
     }
 }
 
-customElements.define("infinite-slideshow", InfiniteSlideshow);
+customElements.define("default-slideshow", DefaultSlideshow);

@@ -21,10 +21,11 @@
     <link rel="stylesheet" href="./src/css/layout.css">
 
     <!-- Components -->
-    <script type="module" src="./src/components/slideshows/animation-slideshow.js"></script>
+    <script type="module" src="./src/components/slideshows/interactive-slideshow.js"></script>
     <script type="module" src="./src/components/slices/blank-slice.js"></script>
     <script type="module" src="./src/components/slices/interactive-slice.js"></script>
     <script type="module" src="./src/components/project-popups/default-project-popup.js"></script>
+    <script type="module" src="./src/components/project-popups/sketchbook-popup.js"></script>
 
 </head>
 
@@ -51,9 +52,9 @@
         <default-project-popup id="milk-run-popup" class="stationary full-screen openable popup"
             textImagePath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/milk run/text.webp" slideDeckPrefixPath=""
             slideCount="0"></default-project-popup>
-        <default-project-popup id="sketchbook-popup" class="stationary full-screen openable popup"
+        <sketchbook-popup id="sketchbook-popup" class="stationary full-screen openable popup"
             textImagePath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/cardthulu/text.webp" slideDeckPrefixPath=""
-            slideCount="0"></default-project-popup>
+            slideCount="0"></sketchbook-popup>
         <default-project-popup id="cardthulu-game-art-popup" class="stationary full-screen openable popup"
             textImagePath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/cardthulu/text.webp" slideDeckPrefixPath=""
             slideCount="0"></default-project-popup>
@@ -126,7 +127,7 @@
                 <img class="main-image"
                     src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/animation-title.webp"
                     loading="lazy" />
-                <animation-slideshow travel="1">
+                <interactive-slideshow class="animation-slideshow" travel="1" looping="true">
 
                     <div class="animation-slide-content" style="position: relative; width: 100%; overflow: hidden;">
                         <img style="position: absolute; height: 100%;"
@@ -170,7 +171,7 @@
                             loading="lazy" />
                     </div>
 
-                </animation-slideshow>
+                </interactive-slideshow>
             </div>
 
             <!-- Contacts -->
