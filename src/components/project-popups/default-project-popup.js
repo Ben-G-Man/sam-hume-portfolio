@@ -6,10 +6,13 @@ export class DefaultProjectPopup extends ProjectPopup {
         textImagePath: { type: String },
         slideDeckPrefixPath: { type: String },
         slideCount: { type: Number },
+        standardSuffix: { type: String },
     };
     
     constructor() {
         super();
+        this.standardSuffix = ".webp";
+        console.log(this.images);
     }
 
     static styles = [
@@ -22,6 +25,7 @@ export class DefaultProjectPopup extends ProjectPopup {
                     height: 100%;
                     left: 0;
                     top: 0;
+                    z-index: 5;
                 }
 
                 #background {
@@ -31,6 +35,13 @@ export class DefaultProjectPopup extends ProjectPopup {
                     left: 50%;
                     transform: translateX(-50%);
                 }
+
+                image-slideshow {
+                    position: absolute;
+                    right: 15%;
+                    width: 55%;
+                    height: 80%;
+                }
             `,
     ]
 
@@ -38,6 +49,9 @@ export class DefaultProjectPopup extends ProjectPopup {
         return html`
             <img loading="lazy" id="background" src='https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/background-lined-paper.webp' />
             <img loading="lazy" class="work-text" src="${this.textImagePath}" />
+            <image-slideshow
+                .images=${Array.from({ length: this.slideCount + 1 }, (_, i) => `${this.slideDeckPrefixPath}${i + 1}${this.standardSuffix}`)}
+            ></image-slideshow>
         `;
     }
 }

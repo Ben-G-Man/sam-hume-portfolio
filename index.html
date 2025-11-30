@@ -15,7 +15,9 @@
     <link rel="preload"
         href="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/button-right-red.webp"
         as="image">
-    <link rel="preload" href="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/default-project-popups/exit-symbol-2.webp" as="image">
+    <link rel="preload"
+        href="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/default-project-popups/exit-symbol-2.webp"
+        as="image">
 
     <!-- Stylesheets -->
     <link rel="stylesheet" href="./src/css/layout.css">
@@ -26,6 +28,7 @@
     <script type="module" src="./src/components/slices/interactive-slice.js"></script>
     <script type="module" src="./src/components/project-popups/default-project-popup.js"></script>
     <script type="module" src="./src/components/project-popups/sketchbook-popup.js"></script>
+    <script type="module" src="./src/components/project-popups/digital-art-popup.js"></script>
 
 </head>
 
@@ -47,20 +50,21 @@
         <div id="blur" class="stationary full-screen openable"></div>
 
         <default-project-popup id="superheavy-concept-art-popup" class="stationary full-screen openable popup"
-            textImagePath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/super heavy concept art/text.webp" slideDeckPrefixPath=""
-            slideCount="0"></default-project-popup>
+            textImagePath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/super heavy concept art/text.webp"
+            slideDeckPrefixPath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/super heavy concept art/superheavy concepts "
+            slideCount="9"></default-project-popup>
         <default-project-popup id="milk-run-popup" class="stationary full-screen openable popup"
-            textImagePath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/milk run/text.webp" slideDeckPrefixPath=""
-            slideCount="0"></default-project-popup>
+            textImagePath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/milk run/text.webp"
+            slideDeckPrefixPath="" slideCount="0"></default-project-popup>
         <sketchbook-popup id="sketchbook-popup" class="stationary full-screen openable popup"
-            textImagePath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/cardthulu/text.webp" slideDeckPrefixPath=""
-            slideCount="0"></sketchbook-popup>
+            textImagePath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/cardthulu/text.webp"
+            slideDeckPrefixPath="" slideCount="0"></sketchbook-popup>
         <default-project-popup id="cardthulu-game-art-popup" class="stationary full-screen openable popup"
-            textImagePath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/cardthulu/text.webp" slideDeckPrefixPath=""
-            slideCount="0"></default-project-popup>
-        <default-project-popup id="misc-digital-art-popup" class="stationary full-screen openable popup"
-            textImagePath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/cardthulu/text.webp" slideDeckPrefixPath=""
-            slideCount="0"></default-project-popup>
+            textImagePath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/cardthulu/text.webp"
+            slideDeckPrefixPath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/cardthulu/cardthulu-"
+            slideCount="7"></default-project-popup>
+        <digital-art-popup id="misc-digital-art-popup"
+            class="stationary full-screen openable popup"></digital-art-popup>
 
         <div id="main-stack">
 
@@ -101,12 +105,10 @@
                     <img onclick="OpenPopup('sketchbook-popup')"
                         src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/sketchbook-colour.webp"
                         alt="" loading="lazy" />
-                    <img
-                        class="wip"
+                    <img class="wip"
                         src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/portfolio-wip.webp"
                         alt="" loading="lazy" />
-                    <img
-                        class="wip"
+                    <img class="wip"
                         src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/pixel-art-wip.webp"
                         alt="" loading="lazy" />
                     <img onclick="OpenPopup('cardthulu-game-art-popup')"

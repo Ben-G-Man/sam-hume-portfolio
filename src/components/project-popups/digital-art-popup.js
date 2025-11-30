@@ -1,0 +1,49 @@
+import { html, css } from "lit";
+import { ProjectPopup } from "./project-popup";
+
+export class DigitalArtPopup extends ProjectPopup {    
+    constructor() {
+        super();
+
+        this.slideshowImages = [
+            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/other digital art/digital 1.webp",
+            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/other digital art/digital 2.webp",
+            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/other digital art/digital 3.webp",
+            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/other digital art/digital 4.webp",
+            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/other digital art/digital 5.webp",
+            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/other digital art/digital 6.webp",
+            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/other digital art/digital 7.webp",
+        ];
+    }
+
+    static styles = [
+        ProjectPopup.styles,
+        css`
+            img {
+                position: absolute;
+                width: 100%;
+                height: 86%;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+
+            image-slideshow {
+                margin-left: 15%;
+                width: 70%;
+                height: 60%;
+            }
+        `,
+    ];
+
+    renderExtraContent() {
+        return html`
+            <img src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/other digital art/other digital art.webp" />
+            <image-slideshow
+                .images=${this.slideshowImages}
+            ></image-slideshow>
+        `;
+    }
+}
+
+customElements.define("digital-art-popup", DigitalArtPopup);
