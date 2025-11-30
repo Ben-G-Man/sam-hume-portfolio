@@ -18,13 +18,13 @@ export class ProjectPopup extends LitElement {
             position: absolute;
             top: 5%;
             right: 5%;
-            background-image: url('./public/images/project-popups/exit-symbol-1.webp');
+            background-image: url('https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/exit-symbol-1.webp');
             background-size: cover;
             cursor: pointer;
         }
 
         #exit-button:hover {
-            background-image: url('./public/images/project-popups/exit-symbol-2.webp');
+            background-image: url('https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/exit-symbol-2.webp');
         }
 
         #background {
@@ -43,7 +43,7 @@ export class ProjectPopup extends LitElement {
     render() {
         return html`
             <div>
-                <img loading="lazy" id="background" src='./public/images/project-popups/background-lined-paper.webp' />
+                <img loading="lazy" id="background" src='https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/background-lined-paper.webp' />
                 <div id="exit-button" onclick="ClosePopup()"></div>
                 ${this.renderExtraContent()}
             </div>
