@@ -27,12 +27,13 @@ export class DigitalArtPopup extends ProjectPopup {
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
+                object-fit: contain;
             }
 
             image-slideshow {
-                margin-left: 15%;
-                width: 70%;
-                height: 60%;
+                margin-left: 20%;
+                width: 60%;
+                height: 50%;
             }
         `,
     ];
