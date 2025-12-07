@@ -9,7 +9,7 @@ export class DefaultSlideshow extends LitElement {
 
     constructor() {
         super();
-        this.looping = false;
+        this.looping = true;
         this.currentIndex = this.looping ? 1 : 0;
         this.travel = 1;
         this.totalSlides = 0;

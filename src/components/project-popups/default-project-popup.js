@@ -21,7 +21,6 @@ export class DefaultProjectPopup extends ProjectPopup {
                 .work-text {
                     pointer-events: none;
                     position: absolute;
-                    width: 100%;
                     height: 100%;
                     left: 0;
                     top: 0;
@@ -50,7 +49,7 @@ export class DefaultProjectPopup extends ProjectPopup {
             <img loading="lazy" id="background" src='https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/background-lined-paper.webp' />
             <img loading="lazy" class="work-text" src="${this.textImagePath}" />
             <image-slideshow
-                .images=${Array.from({ length: this.slideCount + 1 }, (_, i) => `${this.slideDeckPrefixPath}${i + 1}${this.standardSuffix}`)}
+                .images=${Array.from({ length: this.slideCount}, (_, i) => `${this.slideDeckPrefixPath}${i + 1}${this.standardSuffix}`)}
             ></image-slideshow>
         `;
     }
