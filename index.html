@@ -10,6 +10,9 @@
 
     <!-- Preloading -->
     <link rel="preload"
+        href="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/loading animation white.gif"
+        as="image">
+    <link rel="preload"
         href="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/button-left-red.webp"
         as="image">
     <link rel="preload"
@@ -47,6 +50,15 @@
 
         <!-- Stationary Content -->
 
+        <div id="loading">
+            <img id="loading-background"
+                src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/loading background.webp"
+                loading="eager" />
+            <img id="loading-spinner"
+                src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/loading animation white.gif"
+                loading="eager" />
+        </div>
+
         <div id="blur" class="stationary full-screen openable"></div>
 
         <default-project-popup id="superheavy-concept-art-popup" class="stationary full-screen openable popup"
@@ -55,14 +67,9 @@
             slideCount="9"></default-project-popup>
         <default-project-popup id="milk-run-popup" class="stationary full-screen openable popup"
             textImagePath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/milk run/text.webp"
-            slideDeckPrefixPath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/milk run/milk run " slideCount="1"></default-project-popup>
-        <sketchbook-popup id="sketchbook-popup" class="stationary full-screen openable popup"
-            textImagePath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/cardthulu/text.webp"
-            slideDeckPrefixPath="" slideCount="0"></sketchbook-popup>
-        <default-project-popup id="cardthulu-game-art-popup" class="stationary full-screen openable popup"
-            textImagePath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/cardthulu/text.webp"
-            slideDeckPrefixPath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/cardthulu/cardthulu-"
-            slideCount="7"></default-project-popup>
+            slideDeckPrefixPath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/milk run/milk run "
+            slideCount="1"></default-project-popup>
+        <sketchbook-popup id="sketchbook-popup" class="stationary full-screen openable popup"></sketchbook-popup>
         <digital-art-popup id="misc-digital-art-popup"
             class="stationary full-screen openable popup"></digital-art-popup>
 
@@ -110,9 +117,6 @@
                         alt="" loading="lazy" />
                     <img class="wip"
                         src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/pixel-art-wip.webp"
-                        alt="" loading="lazy" />
-                    <img onclick="OpenPopup('cardthulu-game-art-popup')"
-                        src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/cardthulu-colour.webp"
                         alt="" loading="lazy" />
                     <img onclick="OpenPopup('misc-digital-art-popup')"
                         src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/digital-art-colour.webp"
@@ -211,7 +215,7 @@
                 </div>
 
                 <img class="main-image"
-                    src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/links/click-my-links2.gif"
+                    src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/links/click my links2.gif"
                     loading="lazy">
             </div>
 
@@ -219,6 +223,7 @@
     </main>
 
     <!-- Misc. Scripts -->
+    <script type="module" src="./src/scripts/loading.js"></script>
     <script type="module" src="./src/scripts/melt-animation.js"></script>
     <script type="module" src="./src/scripts/main.js"></script>
 
