@@ -12,7 +12,6 @@ export class DefaultProjectPopup extends ProjectPopup {
     constructor() {
         super();
         this.standardSuffix = ".webp";
-        console.log(this.images);
     }
 
     static styles = [
@@ -21,6 +20,7 @@ export class DefaultProjectPopup extends ProjectPopup {
                 .work-text {
                     pointer-events: none;
                     position: absolute;
+                    width: 100%;
                     height: 100%;
                     left: 0;
                     top: 0;

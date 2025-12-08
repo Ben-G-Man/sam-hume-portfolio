@@ -40,7 +40,7 @@ export class ImageSlideshow extends LitElement {
         ${this.images.map(
             (imageUrl) =>
             html`<div class="imageSlide">
-                <img src="${imageUrl}" />
+                <img style="cursor: zoom-in; pointer-events: all;" src="${imageUrl}" />
             </div>`
         )}
         </interactive-slideshow>

@@ -1,3 +1,13 @@
+/* ---- Z-Index Allocations ----
+ 40 <- Loading Screen (must be above all else)
+ 21 <- Full-Screen Exit Button
+ 20 <- Full-Screen Images
+ 12 <- Pop-Up Exit Button
+ 11 <- Pop-Ups
+ 10 <- Pop-Up Blur
+ 0  <- Black Background (Blackground)
+*/
+
 /* #region ---- Variables + Overhead ---- */
 
 :root {
@@ -56,7 +66,7 @@ section {
     position: fixed;
     width: 100vw;
     height: 100vh;
-    z-index: 30;
+    z-index: 40;
     transition: opacity 0.5s ease-out;
 }
 
@@ -113,13 +123,13 @@ section {
 }
 
 #blur {
-    z-index: 3;
+    z-index: 10;
     background-color: rgba(6, 0, 1, 0.7);
     backdrop-filter: blur(10px);
 }
 
 .popup {
-    z-index: 4;
+    z-index: 11;
 }
 
 .openable {
@@ -166,15 +176,6 @@ section {
 #misc-works {
     position: relative;
     padding-bottom: 60px;
-}
-
-#wiggle-man {
-    position: absolute;
-    z-index: 2;
-    transform: translateY(100%);
-    left: 0;
-    bottom: 0;
-    transform: translateY(calc(40% - 60px));
 }
 
 .image-grid {
@@ -241,6 +242,34 @@ interactive-slice {
     height: 100%;
     position: relative;
     float: left;
+}
+
+/* #endregion */
+/* #region ---- Full Screen Images ---- */
+
+#image-full-screen-container {
+    z-index: 20;
+    background-color: black;
+}
+
+#image-full-screen {
+    object-fit: contain;
+}
+
+#exit-button {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    background-image: url('https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/exit-symbol-1.webp');
+    background-size: cover;
+    cursor: pointer;
+    z-index: 21;
+}
+
+#exit-button:hover {
+    background-image: url('https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/exit-symbol-2.webp');
 }
 
 /* #endregion */

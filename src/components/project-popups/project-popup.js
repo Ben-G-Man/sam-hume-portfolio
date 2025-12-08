@@ -23,7 +23,7 @@ export class ProjectPopup extends LitElement {
             background-image: url('https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/exit-symbol-1.webp');
             background-size: cover;
             cursor: pointer;
-            z-index: 20;
+            z-index: 12;
         }
 
         #exit-button:hover {
