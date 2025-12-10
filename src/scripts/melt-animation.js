@@ -27,7 +27,7 @@ main.addEventListener("scroll", () => {
 
     targetFrame = Math.min(
         frameCount,
-        Math.max(1, Math.floor(scrollFraction * frameCount) + 1)
+        Math.floor(scrollFraction * frameCount)
     );
 });
 
