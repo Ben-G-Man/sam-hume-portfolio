@@ -1,0 +1,10 @@
+body {
+    height: 100vh;
+    overflow: hidden;
+    background-color: #101010;
+}
+
+main {
+    height: 100vh;
+    overflow: scroll;
+}

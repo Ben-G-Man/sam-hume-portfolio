@@ -1,0 +1,33 @@
+.image-grid {
+    position: absolute;
+    top: 20%;
+    left: 20vw;
+    width: 60vw;
+    aspect-ratio: 3 / 4;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.image-grid img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    pointer-events: all;
+}
+
+.image-grid img:not(.wip) {
+    cursor: pointer;
+    filter: grayscale(100%);
+    transition: 0.3s;
+}
+
+.image-grid img:not(.wip):hover {
+    filter: grayscale(0%);
+    transition: 0.3s;
+}
+
+.image-grid img.wip {
+    cursor: not-allowed;
+}

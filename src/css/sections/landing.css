@@ -1,0 +1,17 @@
+#landing {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 14vh;
+}
+
+#landing-background {
+    width: var(--default-width);
+    margin-left: var(--default-margin);
+}
+
+#face-melt {
+    position: absolute;
+    width: 64%;
+    left: 18%;
+    top: 10vw;
+}

@@ -25,8 +25,30 @@
         href="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/default-project-popups/exit-symbol-2.webp"
         as="image">
 
-    <!-- Stylesheets -->
-    <link rel="stylesheet" href="./src/css/layout.css">
+    <!-- Base Stylesheets -->
+    <link rel="stylesheet" href="./src/css/base/variables.css">
+    <link rel="stylesheet" href="./src/css/base/resets.css">
+    <link rel="stylesheet" href="./src/css/base/global.css">
+
+    <!-- Layout Stylesheets -->
+    <link rel="stylesheet" href="./src/css/layout/main-layout.css">
+    <link rel="stylesheet" href="./src/css/layout/background.css">
+    <link rel="stylesheet" href="./src/css/layout/stationary.css">
+
+    <!-- Local Component Stylesheets -->
+    <link rel="stylesheet" href="./src/css/local-components/loading.css">
+    <link rel="stylesheet" href="./src/css/local-components/popup.css">
+    <link rel="stylesheet" href="./src/css/local-components/image-grid.css">
+
+    <!-- Sections Stylesheets -->
+    <link rel="stylesheet" href="./src/css/sections/landing.css">
+    <link rel="stylesheet" href="./src/css/sections/about.css">
+    <link rel="stylesheet" href="./src/css/sections/misc-works.css">
+    <link rel="stylesheet" href="./src/css/sections/animation.css">
+    <link rel="stylesheet" href="./src/css/sections/links.css">
+
+    <!-- Template Stylesheets -->
+    <link rel="stylesheet" href="./src/css/templates/popup-image-template.css">
 
     <!-- Components -->
     <script type="module" src="./src/components/slideshows/interactive-slideshow.js"></script>
@@ -35,19 +57,6 @@
     <script type="module" src="./src/components/project-popups/default-project-popup.js"></script>
     <script type="module" src="./src/components/project-popups/sketchbook-popup.js"></script>
     <script type="module" src="./src/components/project-popups/digital-art-popup.js"></script>
-
-    <!-- Full Screen Logic -->
-    <script type="module">
-        import {
-            initFullscreen,
-            openFullscreen,
-            closeFullScreen
-        } from "./src/scripts/image-full-screen.js";
-
-        initFullscreen();
-
-        window.closeFullScreen = closeFullScreen;
-    </script>
 
 </head>
 
@@ -88,11 +97,6 @@
         <sketchbook-popup id="sketchbook-popup" class="stationary full-screen openable popup"></sketchbook-popup>
         <digital-art-popup id="misc-digital-art-popup"
             class="stationary full-screen openable popup"></digital-art-popup>
-            
-        <div id="image-full-screen-container" class="stationary full-screen openable">
-            <img id="image-full-screen" class="stationary full-screen" />
-            <div id="exit-button" onclick="ClosePopup()"></div>            
-        </div>
 
         <div id="main-stack">
 
@@ -239,6 +243,14 @@
 
         </div>
     </main>
+
+    <!-- Templates -->
+    <template id="full-screen-template">
+        <div id="image-full-screen-container">
+            <img id="image-full-screen" />
+            <div id="exit-button"></div>
+        </div>
+        </template>
 
     <!-- Misc. Scripts -->
     <script type="module" src="./src/scripts/loading.js"></script>

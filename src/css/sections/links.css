@@ -1,0 +1,20 @@
+#links-container {
+    aspect-ratio: 2555 / 2110;
+    position: relative;
+    overflow: hidden;
+    width: calc(var(--default-width) - 8%);
+    margin-left: calc(var(--default-margin) + 4%);
+}
+
+#inactive-region {
+    height: 53%;
+    width: 100%;
+    position: absolute;
+}
+
+blank-slice,
+interactive-slice {
+    height: 100%;
+    position: relative;
+    float: left;
+}

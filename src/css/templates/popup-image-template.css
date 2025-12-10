@@ -1,0 +1,34 @@
+#image-full-screen-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+#image-full-screen {
+    object-fit: contain;
+    max-width: 90%;
+    max-height: 90%;
+}
+
+#exit-button {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    background-image: url('https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/exit-symbol-1.webp');
+    background-size: cover;
+    cursor: pointer;
+    z-index: 2000;
+}
+
+#exit-button:hover {
+    background-image: url('https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/exit-symbol-2.webp');
+}

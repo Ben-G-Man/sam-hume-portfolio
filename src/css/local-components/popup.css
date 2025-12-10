@@ -1,0 +1,17 @@
+#blur {
+    z-index: 10;
+    background-color: rgba(6, 0, 1, 0.7);
+    backdrop-filter: blur(10px);
+}
+
+.popup {
+    z-index: 11;
+}
+
+.openable {
+    display: none;
+}
+
+.openable.open {
+    display: block;
+}

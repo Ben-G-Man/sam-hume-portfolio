@@ -1,4 +1,5 @@
 import { LitElement, html, css } from "lit";
+import { ExpandableImage } from "../expandable-image";
 
 export class ImageSlideshow extends LitElement {
     static properties = {
@@ -28,7 +29,7 @@ export class ImageSlideshow extends LitElement {
     `;
 
     render() {
-    return html`
+        return html`
         <interactive-slideshow
         .prevImagePath=${this.prevImagePath}
         .prevImagePathHover=${this.prevImagePathHover}
@@ -39,8 +40,8 @@ export class ImageSlideshow extends LitElement {
         >
         ${this.images.map(
             (imageUrl) =>
-            html`<div class="imageSlide">
-                <img style="cursor: zoom-in; pointer-events: all;" src="${imageUrl}" />
+                html`<div class="imageSlide">
+                <expandable-image src="${imageUrl}" /></expandable-image>
             </div>`
         )}
         </interactive-slideshow>

@@ -1,0 +1,13 @@
+#main-background {
+    position: absolute;
+    display: block;
+    width: 100%;
+}
+
+#main-background img {
+    display: block;
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
