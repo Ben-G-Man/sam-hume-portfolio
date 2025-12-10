@@ -14,7 +14,8 @@ export class ExpandableImage extends LitElement {
 
   static styles = css`
     #main-image {
-      width: 100%;
+      max-width: 100%;
+      max-height: 100%;
       cursor: zoom-in;
     }
   `;

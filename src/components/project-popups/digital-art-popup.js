@@ -23,7 +23,6 @@ export class DigitalArtPopup extends ProjectPopup {
             img {
                 position: absolute;
                 width: 100%;
-                height: 86%;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
@@ -31,9 +30,9 @@ export class DigitalArtPopup extends ProjectPopup {
             }
 
             image-slideshow {
-                margin-left: 20%;
-                width: 60%;
-                height: 50%;
+                margin-left: 13%;
+                height: 100%;
+                width: 74%;
             }
         `,
     ];

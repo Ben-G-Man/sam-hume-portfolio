@@ -39,6 +39,7 @@ export class SketchbookPopup extends ProjectPopup {
             <image-slideshow
                 travel="0.5"
                 .images=${this.slideshowImages}
+                .continuous=${true}
             ></image-slideshow>
         `;
     }
