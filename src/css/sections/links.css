@@ -4,6 +4,7 @@
     overflow: hidden;
     width: calc(var(--default-width) - 8%);
     margin-left: calc(var(--default-margin) + 4%);
+    margin-bottom: -13%;
 }
 
 #inactive-region {

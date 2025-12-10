@@ -1,12 +1,10 @@
 const img = document.getElementById("face-melt");
 const main = document.getElementsByTagName("main")[0];
 
-/* ---- Settings ---- */
-
 const startPos = window.innerHeight * 0.15;
 const endPos = window.innerHeight * 0.6;
 const frameCount = 9;
-const maxFrameRate = 20; // FPS limit
+const maxFrameRate = 20;
 const minFrameTime = 1000 / maxFrameRate;
 
 let targetFrame = 1;
@@ -14,7 +12,7 @@ let displayedFrame = 1;
 let lastFrameTime = 0;
 
 const currentFrame = (i) =>
-    `https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/landing/frame${i
+    `https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/landing/face-melt-${i
         .toString()
         .padStart(4, "0")}.webp`;
 
@@ -22,9 +20,6 @@ function updateImage(index) {
     img.src = currentFrame(index);
 }
 
-/* ------------------------------------------
-   SCROLL HANDLER — only sets the targetFrame
-------------------------------------------- */
 main.addEventListener("scroll", () => {
     const scrollTop = main.scrollTop - startPos;
     let scrollFraction = scrollTop / endPos;
@@ -37,9 +32,6 @@ main.addEventListener("scroll", () => {
     );
 });
 
-/* ------------------------------------------
-   CONTINUOUS ANIMATION LOOP
-------------------------------------------- */
 function animate() {
     requestAnimationFrame(animate);
 
