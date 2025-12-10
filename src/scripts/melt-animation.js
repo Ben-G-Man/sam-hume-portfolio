@@ -3,7 +3,7 @@ const main = document.getElementsByTagName("main")[0];
 
 const startPos = window.innerHeight * 0.15;
 const endPos = window.innerHeight * 0.6;
-const frameCount = 9;
+const frameCount = 8;
 const maxFrameRate = 20;
 const minFrameTime = 1000 / maxFrameRate;
 
@@ -13,8 +13,7 @@ let lastFrameTime = 0;
 
 const currentFrame = (i) =>
     `https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/landing/face-melt-${i
-        .toString()
-        .padStart(4, "0")}.webp`;
+        .toString()}.webp`;
 
 function updateImage(index) {
     img.src = currentFrame(index);
