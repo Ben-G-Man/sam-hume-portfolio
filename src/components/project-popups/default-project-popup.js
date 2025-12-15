@@ -46,7 +46,7 @@ export class DefaultProjectPopup extends ProjectPopup {
 
     renderExtraContent() {
         return html`
-            <img loading="lazy" id="background" src='https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/background-lined-paper.webp' />
+            <img loading="lazy" id="background" src='https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/background-squared-paper.webp' />
             <img loading="lazy" class="work-text" src="${this.textImagePath}" />
             <image-slideshow
                 .images=${Array.from({ length: this.slideCount}, (_, i) => `${this.slideDeckPrefixPath}${i + 1}${this.standardSuffix}`)}
