@@ -10,14 +10,10 @@ export class ImageSlideshow extends LitElement {
 
     constructor() {
         super();
-        this.prevImagePath =
-            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow-L1.webp";
-        this.prevImagePathHover =
-            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow-L2.webp";
-        this.nextImagePath =
-            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow-R1.webp";
-        this.nextImagePathHover =
-            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow-R2.webp";
+        this.imagePath =
+            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow 1.webp";
+        this.imagePathHover =
+            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow 2 (select).gif";
         this.travel = 1;
         this.continuous = false;
     }
@@ -33,10 +29,8 @@ export class ImageSlideshow extends LitElement {
     render() {
         return html`
         <interactive-slideshow
-        .prevImagePath=${this.prevImagePath}
-        .prevImagePathHover=${this.prevImagePathHover}
-        .nextImagePath=${this.nextImagePath}
-        .nextImagePathHover=${this.nextImagePathHover}
+        .imagePath=${this.imagePath}
+        .imagePathHover=${this.imagePathHover}
         buttonSpacing="0"
         travel="${this.travel}"
         >

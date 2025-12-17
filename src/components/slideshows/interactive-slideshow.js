@@ -3,23 +3,17 @@ import { DefaultSlideshow } from "./default-slideshow.js";
 
 export class InteractiveSlideshow extends DefaultSlideshow {
     static properties = {
-        prevImagePath: { type: String },
-        prevImagePathHover: { type: String },
-        nextImagePath: { type: String },
-        nextImagePathHover: { type: String },
+        imagePath: { type: String },
+        imagePathHover: { type: String },
         buttonSpacing: { type: String },
     };
 
     constructor() {
         super();
-        this.prevImagePath =
+        this.imagePath =
             "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/button-left-grey.webp";
-        this.prevImagePathHover =
+        this.imagePathHover =
             "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/button-left-red.webp";
-        this.nextImagePath =
-            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/button-right-grey.webp";
-        this.nextImagePathHover =
-            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/button-right-red.webp";
         this.buttonSpacing = "10vw";
     }
 
@@ -47,20 +41,21 @@ export class InteractiveSlideshow extends DefaultSlideshow {
 
             #prev {
                 left: var(--button-spacing);
-                background-image: var(--prev-img);
+                background-image: var(--btn-img);
             }
 
             #prev:hover {
-                background-image: var(--prev-hover);
+                background-image: var(--btn-img-hover);
             }
 
             #next {
                 right: var(--button-spacing);
-                background-image: var(--next-img);
+                background-image: var(--btn-img);
+                transform: translateY(-50%) scaleX(-1);
             }
 
             #next:hover {
-                background-image: var(--next-hover);
+                background-image: var(--btn-img-hover);
             }
         `,
     ];
@@ -71,8 +66,8 @@ export class InteractiveSlideshow extends DefaultSlideshow {
                 id="prev"
                 @click="${this.prevSlide}"
                 style="
-                    --prev-img: url(${this.prevImagePath});
-                    --prev-hover: url(${this.prevImagePathHover});
+                    --btn-img: url(${this.imagePath});
+                    --btn-img-hover: url(${this.imagePathHover});
                     --button-spacing: ${this.buttonSpacing};
                 "
             ></button>
@@ -81,8 +76,8 @@ export class InteractiveSlideshow extends DefaultSlideshow {
                 id="next"
                 @click="${this.nextSlide}"
                 style="
-                    --next-img: url(${this.nextImagePath});
-                    --next-hover: url(${this.nextImagePathHover});
+                    --btn-img: url(${this.imagePath});
+                    --btn-img-hover: url(${this.imagePathHover});
                     --button-spacing: ${this.buttonSpacing};
                 "
             ></button>
