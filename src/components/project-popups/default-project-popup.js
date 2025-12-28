@@ -32,16 +32,15 @@ export class DefaultProjectPopup extends ProjectPopup {
                 }
 
                 #background {
-                    height: 90%;
+                    width: 90%;
                     position: absolute;
-                    top: 5%;
                     left: 50%;
                     transform: translateX(-50%);
                 }
 
                 image-slideshow {
                     position: absolute;
-                    right: 15%;
+                    right: 10%;
                     width: 55%;
                     height: 80%;
                 }

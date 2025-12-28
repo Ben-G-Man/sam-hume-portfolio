@@ -10,10 +10,6 @@ export class ImageSlideshow extends LitElement {
 
     constructor() {
         super();
-        this.imagePath =
-            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow 1.webp";
-        this.imagePathHover =
-            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow 2 (select).gif";
         this.travel = 1;
         this.continuous = false;
     }
@@ -29,10 +25,10 @@ export class ImageSlideshow extends LitElement {
     render() {
         return html`
         <interactive-slideshow
-        .imagePath=${this.imagePath}
-        .imagePathHover=${this.imagePathHover}
-        buttonSpacing="0"
-        travel="${this.travel}"
+            imagePath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow_1.webp"
+            imagePathHover="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow_2.gif"
+            buttonSpacing="0"
+            travel="${this.travel}"
         >
         ${this.images.map(
             imageUrl => html`
