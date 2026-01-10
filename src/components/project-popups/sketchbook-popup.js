@@ -18,7 +18,7 @@ export class SketchbookPopup extends ProjectPopup {
         css`
             img {
                 position: absolute;
-                width: 91%;
+                width: 105%;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
@@ -26,8 +26,8 @@ export class SketchbookPopup extends ProjectPopup {
 
             image-slideshow {
                 padding-top: 4%;
-                margin-left: 10%;
-                width: 80%;
+                margin-left: 3.5%;
+                width: 92%;
                 aspect-ratio: 1946 / 800;
             }
         `,

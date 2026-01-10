@@ -49,6 +49,10 @@ export class DefaultProjectPopup extends ProjectPopup {
                 table #title {
                     font-size: 3rem;
                 }
+
+                table tr:last-of-type {
+                    transform: translateY(1.4vh);
+                }
             `,
     ]
 
