@@ -7,6 +7,7 @@ export class MultimediaSlideshow extends LitElement {
         video: { type: String },
         travel: { type: Number },
         continuous: { type: Boolean },
+        navBar: { type: Boolean },
     };
 
     constructor() {
@@ -15,6 +16,7 @@ export class MultimediaSlideshow extends LitElement {
         this.videos = [];
         this.travel = 1;
         this.continuous = false;
+        this.navBar = false;
     }
 
     static styles = css`
@@ -32,6 +34,7 @@ export class MultimediaSlideshow extends LitElement {
                 imagePathHover="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow_2.gif"
                 buttonSpacing="-3vw"
                 travel="${this.travel}"
+                stylePreset="${this.navBar ? 'withNavBar' : 'default'}"
             >
 
                 ${this.images.map(
