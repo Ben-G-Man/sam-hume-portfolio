@@ -29,7 +29,7 @@ export class DigitalArtPopup extends ProjectPopup {
                 object-fit: contain;
             }
 
-            image-slideshow {
+            multimedia-slideshow {
                 margin-left: 13%;
                 height: 100%;
                 width: 74%;
@@ -40,9 +40,9 @@ export class DigitalArtPopup extends ProjectPopup {
     renderExtraContent() {
         return html`
             <img src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/other digital art/other digital art.webp" />
-            <image-slideshow
+            <multimedia-slideshow
                 .images=${this.slideshowImages}
-            ></image-slideshow>
+            ></multimedia-slideshow>
         `;
     }
 }

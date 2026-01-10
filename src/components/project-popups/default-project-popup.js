@@ -11,11 +11,13 @@ export class DefaultProjectPopup extends ProjectPopup {
         slideDeckPrefixPath: { type: String },
         slideCount: { type: Number },
         standardSuffix: { type: String },
+        video: { type: String },
     };
     
     constructor() {
         super();
         this.standardSuffix = ".webp";
+        this.videos = [];
     }
 
     static styles = [
@@ -28,7 +30,7 @@ export class DefaultProjectPopup extends ProjectPopup {
                     transform: translateX(-50%);
                 }
 
-                image-slideshow {
+                multimedia-slideshow {
                     position: absolute;
                     right: 10%;
                     width: 55%;
@@ -59,9 +61,10 @@ export class DefaultProjectPopup extends ProjectPopup {
     renderExtraContent() {
         return html`
             <img loading="lazy" id="background" src='https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/background-squared-paper.webp' />
-            <image-slideshow
+            <multimedia-slideshow
                 .images=${Array.from({ length: this.slideCount}, (_, i) => `${this.slideDeckPrefixPath}${i + 1}${this.standardSuffix}`)}
-            ></image-slideshow>
+                .video=${this.video}
+            ></multimedia-slideshow>
             <table>
                 <tr>
                     <td colspan="2" id="title">${this.title}</td>

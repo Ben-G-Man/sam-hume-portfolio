@@ -1,6 +1,6 @@
 import { html, css } from "lit";
 import { ProjectPopup } from "./project-popup";
-import { ImageSlideshow } from "./../slideshows/image-slideshow";
+import { MultimediaSlideshow } from "../slideshows/multimedia-slideshow";
 
 export class SketchbookPopup extends ProjectPopup {
     constructor() {
@@ -24,7 +24,7 @@ export class SketchbookPopup extends ProjectPopup {
                 transform: translate(-50%, -50%);
             }
 
-            image-slideshow {
+            multimedia-slideshow {
                 padding-top: 4%;
                 margin-left: 3.5%;
                 width: 92%;
@@ -36,11 +36,11 @@ export class SketchbookPopup extends ProjectPopup {
     renderExtraContent() {
         return html`
             <img src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/sketchbooks/sketchbook layout.webp" />
-            <image-slideshow
+            <multimedia-slideshow
                 travel="0.5"
                 .images=${this.slideshowImages}
                 .continuous=${true}
-            ></image-slideshow>
+            ></multimedia-slideshow>
         `;
     }
 }
