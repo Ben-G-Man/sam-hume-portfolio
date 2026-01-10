@@ -1,17 +1,11 @@
 import { css, html } from "lit";
 import { DefaultSlideshow } from "./default-slideshow.js";
 
-const STYLE_PRESETS = {
-    default: "button { width: 13vw; }",
-    withNavBar: "button { width: 8vw; }",
-};
-
 export class InteractiveSlideshow extends DefaultSlideshow {
     static properties = {
         imagePath: { type: String },
         imagePathHover: { type: String },
         buttonSpacing: { type: String },
-        stylePreset: { type: String },
     };
 
     constructor() {
@@ -31,7 +25,8 @@ export class InteractiveSlideshow extends DefaultSlideshow {
 
             button {
                 position: absolute;
-                aspect-ratio: 1 / 1;
+                width: 13vw;
+                height: 13vw;
                 border: 0;
                 top: 50%;
                 transform: translateY(-50%);
@@ -59,11 +54,7 @@ export class InteractiveSlideshow extends DefaultSlideshow {
     ];
 
     renderExtraContent() {
-        const preset = STYLE_PRESETS[this.stylePreset] ?? STYLE_PRESETS.default;
         return html`
-            <style>
-                ${preset}
-            </style>
             <div
                 style="
                     --btn-img: url(${this.imagePath});

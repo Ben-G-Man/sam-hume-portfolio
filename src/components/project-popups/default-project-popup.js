@@ -64,7 +64,7 @@ export class DefaultProjectPopup extends ProjectPopup {
             <multimedia-slideshow
                 .images=${Array.from({ length: this.slideCount}, (_, i) => `${this.slideDeckPrefixPath}${i + 1}${this.standardSuffix}`)}
                 .video=${this.video}
-                navBar="true"
+                navbar="true"
             ></multimedia-slideshow>
             <table>
                 <tr>
