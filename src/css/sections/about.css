@@ -8,3 +8,71 @@
     width: 88vw;
     margin-left: 6vw;
 }
+
+@font-face {
+    font-family: 'HelveticaThermal';
+    src: url('/public/fonts/HelveticaThermalLight.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaThermal';
+    src: url('/public/fonts/HelveticaThermalRegular.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
+#about #about-text-container {
+    position: absolute;
+    width: 56vw;
+    left: 22vw;
+    top: 18.5vw;
+    font-size: 2.2rem;
+    font-family: 'HelveticaThermal', sans-serif;
+}
+
+#about #about-text-container h1 {
+    font-size: 3rem;
+    line-height: 5rem;
+}
+
+#about #about-text-container li {
+    list-style-type: none;
+}
+
+/* Desktop Layout */
+
+#about #about-text-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+#about #about-text-container #skills {
+    width: 20vw;
+}
+
+#about #about-text-container #fast-facts {
+    width: 50vw;
+}
+
+#about #about-text-container #education {
+    margin-top: 6vw;
+    grid-column: 1 / -1;
+}
+
+/* Mobile Layout */
+
+/* #about #about-text-container {
+    display: block;
+}
+
+#about #about-text-container section {
+    margin-bottom: 1rem;
+}
+
+#about #about-text-container #skills ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+} */

@@ -21,16 +21,6 @@ export class DefaultProjectPopup extends ProjectPopup {
     static styles = [
             ProjectPopup.styles,
             css`
-                .work-text {
-                    pointer-events: none;
-                    position: absolute;
-                    width: 100%;
-                    height: 100%;
-                    left: 0;
-                    top: 0;
-                    z-index: 5;
-                }
-
                 #background {
                     width: 90%;
                     position: absolute;
@@ -44,6 +34,21 @@ export class DefaultProjectPopup extends ProjectPopup {
                     width: 55%;
                     height: 80%;
                 }
+
+                table {
+                    position: absolute;
+                    left: 13%;
+                    /* This calc keeps the top of the text in line with the top of the space allocated in the background art */
+                    top: calc(50% - 20.5vw);
+                    width: 18.5%;
+                    border-spacing: 0 1vh;
+                    font-size: 2.2rem;
+                    font-family: 'HelveticaThermal', sans-serif;
+                }
+
+                table #title {
+                    font-size: 3rem;
+                }
             `,
     ]
 
@@ -53,6 +58,26 @@ export class DefaultProjectPopup extends ProjectPopup {
             <image-slideshow
                 .images=${Array.from({ length: this.slideCount}, (_, i) => `${this.slideDeckPrefixPath}${i + 1}${this.standardSuffix}`)}
             ></image-slideshow>
+            <table>
+                <tr>
+                    <td colspan="2" id="title">${this.title}</td>
+                </tr>
+                <tr>
+                    <td>Year:</td>
+                    <td>${this.year}</td>
+                </tr>
+                <tr>
+                    <td>Length:</td>
+                    <td>${this.length}</td>
+                </tr>
+                <tr>
+                    <td>Tools:</td>
+                    <td>${this.tools}</td>
+                </tr>
+                <tr>
+                    <td colspan="2">${this.description}</td>
+                </tr>
+            </table>​
         `;
     }
 }
