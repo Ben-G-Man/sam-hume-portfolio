@@ -2,8 +2,8 @@
     aspect-ratio: 2555 / 2110;
     position: relative;
     overflow: hidden;
-    width: calc(var(--default-width) - 8%);
-    margin-left: calc(var(--default-margin) + 4%);
+    width: 80%;
+    margin-left: 10%;
     margin-bottom: -13%;
 }
 

@@ -1,6 +1,4 @@
 :root {
     --background-slice-width: 1920;
     --background-slice-height: 3116;
-    --default-width: 86%;
-    --default-margin: calc((100% - var(--default-width)) / 2);
 }

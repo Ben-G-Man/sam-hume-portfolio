@@ -27,7 +27,7 @@ export class ImageSlideshow extends LitElement {
         <interactive-slideshow
             imagePath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow_1.webp"
             imagePathHover="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow_2.gif"
-            buttonSpacing="0"
+            buttonSpacing="-3vw"
             travel="${this.travel}"
         >
         ${this.images.map(

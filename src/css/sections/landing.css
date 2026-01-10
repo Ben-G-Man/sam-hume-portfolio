@@ -5,13 +5,12 @@
 }
 
 #landing-background {
-    width: var(--default-width);
-    margin-left: var(--default-margin);
+    width: 100%;
 }
 
 #face-melt {
     position: absolute;
-    width: 64%;
-    left: 18%;
-    top: 10vw;
+    width: 74%;
+    left: 13%;
+    top: 16vw;
 }

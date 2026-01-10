@@ -1,5 +1,10 @@
 #dancing-cubes {
-    width: calc(var(--default-width) * 0.8);
-    margin-left: calc(var(--default-margin) + var(--default-width) * 0.1);
-    transform: translateY(-10vh);
+    width: 80vw;
+    margin-left: 10vw;
+    margin-top: -10vh;
+}
+
+#about .main-image {
+    width: 88vw;
+    margin-left: 6vw;
 }
