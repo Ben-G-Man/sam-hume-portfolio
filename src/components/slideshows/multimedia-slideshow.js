@@ -45,14 +45,23 @@ export class MultimediaSlideshow extends LitElement {
                     `
                 )}
 
-                ${this.video ? html`
-                    <div>
-                        <video style="max-height: 100%; max-width: 72%;" controls>
-                            <source src="${this.video}" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                    </div>
-                ` : ''}
+                // If a video URL is provided, include it as the last slide via iFrame
+                ${this.video
+                    ? html`
+                        <div>
+                            <iframe
+                                width="60%"
+                                height="60%"
+                                src="${this.video}"
+                                title="YouTube video player"
+                                frameborder="0"
+                                allow="clipboard-write; encrypted-media; picture-in-picture; web-share"
+                                allowfullscreen
+                            ></iframe>
+                        </div>
+                    `
+                    : null
+                }
 
             </interactive-slideshow>
         `;
