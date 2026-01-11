@@ -25,6 +25,10 @@ export class MultimediaSlideshow extends LitElement {
             overflow: hidden;
             position: relative;
         }
+
+        navbar-slideshow {
+            margin-top: -3vw;
+        }
     `;
 
     getSlides() {
@@ -33,7 +37,7 @@ export class MultimediaSlideshow extends LitElement {
                 <div>
                     ${this.continuous
                         ? html`<img style="height: 100%;" src="${imageUrl}" />`
-                        : html`<expandable-image style="max-height: 100%; max-width: 72%;" src="${imageUrl}"></expandable-image>`
+                        : html`<expandable-image style="max-height: 100%; max-width: 90%;" src="${imageUrl}"></expandable-image>`
                     }
                 </div>
             `

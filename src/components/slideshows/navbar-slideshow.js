@@ -14,13 +14,21 @@ export class NavbarSlideshow extends DefaultSlideshow {
                 height: 100%;
             }
 
+            #navbar {
+                position: absolute;
+                width: 70%;
+                left: 15%;
+                bottom: 0;
+                height: 6vw;
+                background-color: rgba(0, 0, 0, 0.5);
+            }
+
             button {
                 position: absolute;
-                width: 4vw;
-                height: 4vw;
+                width: 6vw;
+                height: 6vw;
                 border: 0;
-                top: 50%;
-                transform: translateY(-50%);
+                bottom: 0;
                 background: transparent;
                 background-size: contain;
                 background-repeat: no-repeat;
@@ -39,13 +47,14 @@ export class NavbarSlideshow extends DefaultSlideshow {
 
             #next {
                 right: 0;
-                transform: translateY(-50%) scaleX(-1);
+                transform: scaleX(-1);
             }
         `,
     ];
 
     renderExtraContent() {
         return html`
+            <div id="navbar"></div>
             <div>
                 <button id="prev" @click=${this.prevSlide}></button>
                 <button id="next" @click=${this.nextSlide}></button>

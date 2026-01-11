@@ -28,13 +28,13 @@
     width: 56vw;
     left: 22vw;
     top: 18.5vw;
-    font-size: 2.2rem;
+    font-size: var(--text-height);
     font-family: 'HelveticaThermal', sans-serif;
 }
 
 #about #about-text-container h1 {
-    font-size: 3rem;
-    line-height: 5rem;
+    font-size: var(--subtitle-height);
+    line-height: calc(var(--subtitle-height) * 1.6);
 }
 
 #about #about-text-container li {
@@ -57,7 +57,7 @@
 }
 
 #about #about-text-container #education {
-    margin-top: 6vw;
+    margin-top: 5vw;
     grid-column: 1 / -1;
 }
 

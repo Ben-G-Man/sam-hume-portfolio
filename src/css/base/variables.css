@@ -1,4 +1,7 @@
 :root {
     --background-slice-width: 1920;
     --background-slice-height: 3116;
+    --subtitle-height: clamp(1rem, 3vw, 3rem);
+    --text-height: clamp(0.7rem, 2vw, 2rem);
+
 }

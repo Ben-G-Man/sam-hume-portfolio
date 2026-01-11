@@ -44,12 +44,12 @@ export class DefaultProjectPopup extends ProjectPopup {
                     top: calc(50% - 20.5vw);
                     width: 18.5%;
                     border-spacing: 0 1vh;
-                    font-size: 2.2rem;
+                    font-size: var(--text-height);
                     font-family: 'HelveticaThermal', sans-serif;
                 }
 
                 table #title {
-                    font-size: 3rem;
+                    font-size: var(--subtitle-height);
                 }
 
                 table tr:last-of-type {
