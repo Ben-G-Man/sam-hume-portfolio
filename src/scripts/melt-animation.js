@@ -21,7 +21,7 @@ function getScrollMetrics() {
 
     // animation runs between 15% and 60% of the visible viewport
     const start = viewport * 0.15;
-    const end = viewport * 0.6;
+    const end = viewport;
 
     return {
         start,
