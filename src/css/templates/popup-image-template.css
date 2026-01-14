@@ -18,17 +18,20 @@
 }
 
 #exit-button {
-    width: 100px;
-    height: 100px;
+    width: 150px;
+    aspect-ratio: 1/1;
     position: absolute;
     top: 5%;
     right: 5%;
-    background-image: url('https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/exit-symbol-1.webp');
+    background-image: url('https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/exit-symbol-2.webp');
+    filter: grayscale(100%);
+    transition: filter 0.1s ease;
     background-size: cover;
     cursor: pointer;
     z-index: 21;
 }
 
 #exit-button:hover {
-    background-image: url('https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/exit-symbol-2.webp');
+    filter: grayscale(0%);
+    transition: filter 0.1s ease;
 }

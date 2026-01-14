@@ -5,13 +5,15 @@ export class DefaultSlideshow extends LitElement {
         currentIndex: { type: Number },
         travel: { type: Number },
         looping: { type: Boolean },
+        duration: { type: Number },
     };
 
     constructor() {
         super();
-        this.looping = true;
-        this.currentIndex = this.looping ? 1 : 0;
         this.travel = 1;
+        this.looping = true;
+        this.duration = 0.3;
+        this.currentIndex = this.looping ? 1 : 0;
         this.totalSlides = 0;
         this.isTransitioning = false;
         this.slidesContainer = null;
@@ -146,12 +148,17 @@ export class DefaultSlideshow extends LitElement {
     updateTransform(instant = false) {
         if (!this.slidesContainer) return;
 
-        this.slidesContainer.style.transition = instant
+        this.slidesContainer.style.transition = instant || this.duration <= 0
             ? "none"
-            : "transform 0.25s ease";
+            : `transform ${this.duration}s ease`;
         this.slidesContainer.style.transform = `translateX(-${
             this.currentIndex * 100
         }%)`;
+
+        // Correct for lack of transition-triggered end handling
+        if (!instant && this.duration <= 0) {
+            this.handleTransitionEnd();
+        }
     }
 
     handleTransitionEnd() {

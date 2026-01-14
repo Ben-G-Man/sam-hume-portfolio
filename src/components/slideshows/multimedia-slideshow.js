@@ -8,6 +8,7 @@ export class MultimediaSlideshow extends LitElement {
         travel: { type: Number },
         continuous: { type: Boolean },
         navBar: { type: Boolean },
+        duration: { type: Number },
     };
 
     constructor() {
@@ -17,6 +18,7 @@ export class MultimediaSlideshow extends LitElement {
         this.travel = 1;
         this.continuous = false;
         this.navBar = false;
+        this.duration = 0.3;
     }
 
     static styles = css`
@@ -68,16 +70,15 @@ export class MultimediaSlideshow extends LitElement {
     render() {
         if (this.navBar) {
             return html`
-                <navbar-slideshow travel="${this.travel}">
+                <navbar-slideshow travel="${this.travel}" duration="${this.duration}">
                     ${this.getSlides()}
                 </navbar-slideshow>
             `;
         } else {
             return html`
                 <interactive-slideshow
-                    imagePath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow_1.webp"
-                    imagePathHover="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow_2.gif"
-                    buttonSpacing="-3vw"
+                    buttonStyle="scribble"
+                    duration="${this.duration}"
                     travel="${this.travel}"
                 >
                     ${this.getSlides()}

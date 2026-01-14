@@ -3,16 +3,12 @@ import { DefaultSlideshow } from "./default-slideshow.js";
 
 export class InteractiveSlideshow extends DefaultSlideshow {
     static properties = {
-        imagePath: { type: String },
-        imagePathHover: { type: String },
-        buttonSpacing: { type: String },
+        buttonStyle: { type: String },
     };
 
     constructor() {
         super();
-        this.imagePath = "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/button-left-grey.webp";
-        this.imagePathHover = "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/button-left-red.webp";
-        this.buttonSpacing = "10vw";
+        this.buttonStyle = "tape";
     }
 
     static styles = [
@@ -34,20 +30,52 @@ export class InteractiveSlideshow extends DefaultSlideshow {
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center;
-                background-image: var(--btn-img);
                 cursor: pointer;
             }
 
-            button:hover {
-                background-image: var(--btn-img-hover);
+            #prev.scribble {
+                left: -3vw;
             }
 
-            #prev {
-                left: var(--button-spacing);
+            #next.scribble {
+                right: -3vw;
             }
 
-            #next {
-                right: var(--button-spacing);
+            #prev.tape {
+                left: 3vw;
+            }
+
+            #next.tape {
+                right: 3vw;
+            }
+
+            button.tape {
+                filter: grayscale(100%);
+                transition: filter 0.1s ease;
+            }
+
+            button.tape:hover {
+                filter: grayscale(0%);
+                transition: filter 0.1s ease;
+            }
+
+            #prev.tape {
+                background-image: url(https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/button-left-red.webp);
+            }
+
+            #next.tape {
+                background-image: url(https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/button-right-red.webp);
+            }
+
+            button.scribble {
+                background-image: url(https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow_1.webp);
+            }
+
+            button.scribble:hover {
+                background-image: url(https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow_2.gif);
+            }
+
+            #next.scribble {
                 transform: translateY(-50%) scaleX(-1);
             }
         `,
@@ -55,15 +83,8 @@ export class InteractiveSlideshow extends DefaultSlideshow {
 
     renderExtraContent() {
         return html`
-            <div
-                style="
-                    --btn-img: url(${this.imagePath});
-                    --btn-img-hover: url(${this.imagePathHover});
-                    --button-spacing: ${this.buttonSpacing};
-                "
-            >
-                <button id="prev" @click=${this.prevSlide}></button>
-                <button id="next" @click=${this.nextSlide}></button>
+                <button id="prev" class="${this.buttonStyle}" @click=${this.prevSlide}></button>
+                <button id="next" class="${this.buttonStyle}" @click=${this.nextSlide}></button>
             </div>
         `;
     }

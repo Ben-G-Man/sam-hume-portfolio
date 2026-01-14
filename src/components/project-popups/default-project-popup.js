@@ -34,7 +34,7 @@ export class DefaultProjectPopup extends ProjectPopup {
                     position: absolute;
                     right: 10%;
                     width: 55%;
-                    height: 80%;
+                    aspect-ratio: 5 / 4;
                 }
 
                 table {
@@ -65,6 +65,7 @@ export class DefaultProjectPopup extends ProjectPopup {
                 .images=${Array.from({ length: this.slideCount}, (_, i) => `${this.slideDeckPrefixPath}${i + 1}${this.standardSuffix}`)}
                 .video=${this.video}
                 navbar="true"
+                duration="0"
             ></multimedia-slideshow>
             <table>
                 <tr>
