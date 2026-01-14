@@ -19,6 +19,7 @@ export class SketchbookPopup extends ProjectPopup {
             img {
                 position: absolute;
                 width: 105%;
+                max-height: 100vh;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
@@ -35,7 +36,7 @@ export class SketchbookPopup extends ProjectPopup {
 
     renderExtraContent() {
         return html`
-            <img src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/sketchbooks/sketchbook layout.webp" />
+            <img src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/sketchbooks/sketchbook-layout.webp" />
             <multimedia-slideshow
                 travel="0.5"
                 .images=${this.slideshowImages}
