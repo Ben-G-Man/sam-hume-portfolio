@@ -67,10 +67,16 @@ export class MultimediaSlideshow extends LitElement {
         return slides;
     }
 
+    getPreviewImages() {
+        let previewImages = [...this.images];
+        if (this.video) previewImages.concat("placeholderImage");
+        return previewImages;
+    }
+
     render() {
         if (this.navBar) {
             return html`
-                <navbar-slideshow travel="${this.travel}" duration="${this.duration}">
+                <navbar-slideshow travel="${this.travel}" duration="${this.duration}" .previewImages="${this.getPreviewImages()}">
                     ${this.getSlides()}
                 </navbar-slideshow>
             `;
