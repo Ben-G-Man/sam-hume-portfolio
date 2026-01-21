@@ -46,7 +46,6 @@ export class DefaultProjectPopup extends ProjectPopup {
                     top: calc(50% - 20.3vw);
                     width: 19vw;
                     font-size: var(--text-height);
-                    font-family: 'HelveticaThermal', sans-serif;
                 }
 
                 #project-length, #project-tools, #project-year{
