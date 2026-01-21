@@ -22,7 +22,7 @@ export class DigitalArtPopup extends ProjectPopup {
         css`
             img {
                 position: absolute;
-                width: 100vw;
+                width: 80vw;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
