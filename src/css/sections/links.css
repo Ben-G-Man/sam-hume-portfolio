@@ -45,3 +45,11 @@ interactive-slice {
     position: relative;
     float: left;
 }
+
+#click-my-links {
+    transform: translateY(-5vw);
+}
+
+#footer {
+
+}
