@@ -39,7 +39,7 @@ export class DigitalArtPopup extends ProjectPopup {
 
     renderExtraContent() {
         return html`
-            <img src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/other digital art/other digital art.webp" />
+            <img src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/other digital art/other-digital-art.webp" />
             <multimedia-slideshow
                 .images=${this.slideshowImages}
                 duration="0"
