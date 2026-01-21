@@ -22,9 +22,10 @@ export class NavbarSlideshow extends DefaultSlideshow {
 
             #navbar {
                 position: absolute;
-                left: 6vw;
                 bottom: 0;
                 height: 6vw;
+                left: 50%;
+                transform: translate(-50%, -50%);
                 display: flex;
                 justify-content: space-between;
                 gap: 1vw;
@@ -34,10 +35,10 @@ export class NavbarSlideshow extends DefaultSlideshow {
                 height: 100%;
                 aspect-ratio: 373 / 218;
                 cursor: pointer;
+                object-fit: contain;
             }
 
             .navbarSlide:nth-of-type(1), .navbarSlide:nth-of-type(3) {
-                // filter: grayscale(100%);
                 opacity: 0.5;
             }
 
@@ -83,10 +84,10 @@ export class NavbarSlideshow extends DefaultSlideshow {
     }
 
     getRelativeSlidePreview(relativeIndex) {
-        let index = this.currentIndex + relativeIndex;
+        let index = this.currentIndex + relativeIndex - 1; // Base 0 indexing
         if (index < 0) {
             index = this.totalSlides - 1;
-        } else if (index > this.totalSlides) {
+        } else if (index >= this.totalSlides) {
             index = 0;
         }
         return this.previewImages[index];

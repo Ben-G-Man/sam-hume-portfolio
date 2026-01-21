@@ -34,7 +34,9 @@ export class DefaultProjectPopup extends ProjectPopup {
                     position: absolute;
                     right: 10%;
                     width: 55%;
-                    aspect-ratio: 5 / 4;
+                    aspect-ratio: 1 / 1;
+                    top: 50%;
+                    transform: translateY(-55%);
                 }
 
                 table {

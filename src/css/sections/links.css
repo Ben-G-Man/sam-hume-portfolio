@@ -7,13 +7,28 @@
     margin-bottom: -13%;
 }
 
-#inactive-region {
+#inactive-region-top {
     height: 53%;
     width: 100%;
     position: absolute;
 }
 
-blank-slice,
+#inactive-region-left {
+    position: absolute;
+    width: 11.2%;
+    height: 39%;
+    top: 53%;
+    left: 11.5%;
+}
+
+#inactive-region-right {
+    position: absolute;
+    width: 11.2%;
+    height: 39%;
+    top: 53%;
+    right: 22.1%;
+}
+
 interactive-slice {
     height: 100%;
     position: relative;

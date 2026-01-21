@@ -22,7 +22,7 @@ export class DigitalArtPopup extends ProjectPopup {
         css`
             img {
                 position: absolute;
-                width: 100%;
+                width: 100vw;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
@@ -31,8 +31,8 @@ export class DigitalArtPopup extends ProjectPopup {
 
             multimedia-slideshow {
                 margin-left: 13%;
-                height: 100%;
-                width: 74%;
+                width: 74vw;
+                aspect-ratio: 5 / 4;
             }
         `,
     ];
@@ -43,6 +43,7 @@ export class DigitalArtPopup extends ProjectPopup {
             <multimedia-slideshow
                 .images=${this.slideshowImages}
                 duration="0"
+                navbar="true"
             ></multimedia-slideshow>
         `;
     }

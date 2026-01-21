@@ -19,7 +19,6 @@ export class SketchbookPopup extends ProjectPopup {
             img {
                 position: absolute;
                 width: 105%;
-                max-height: 100vh;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);

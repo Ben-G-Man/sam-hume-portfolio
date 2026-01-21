@@ -69,7 +69,7 @@ export class MultimediaSlideshow extends LitElement {
 
     getPreviewImages() {
         let previewImages = [...this.images];
-        if (this.video) previewImages.concat("placeholderImage");
+        if (this.video) previewImages.push("https://cdn-icons-png.flaticon.com/256/7290/7290642.png");
         return previewImages;
     }
 
