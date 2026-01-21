@@ -93,6 +93,11 @@ export class NavbarSlideshow extends DefaultSlideshow {
         return this.previewImages[index];
     }
 
+    firstUpdated() {
+        super.firstUpdated();
+        this.updateNavbar();
+    }
+
     renderExtraContent() {
         return html`
             <div id="navbar">

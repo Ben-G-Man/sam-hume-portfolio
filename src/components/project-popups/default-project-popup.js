@@ -38,24 +38,34 @@ export class DefaultProjectPopup extends ProjectPopup {
                     top: 50%;
                     transform: translateY(-55%);
                 }
-
-                table {
+                    
+                #project-details-pane {
                     position: absolute;
-                    left: 13%;
+                    left: 12.7vw;
                     /* This calc keeps the top of the text in line with the top of the space allocated in the background art */
-                    top: calc(50% - 20.5vw);
-                    width: 18.5%;
-                    border-spacing: 0 1vh;
+                    top: calc(50% - 20.3vw);
+                    width: 19vw;
                     font-size: var(--text-height);
                     font-family: 'HelveticaThermal', sans-serif;
                 }
 
-                table #title {
-                    font-size: var(--subtitle-height);
+                #project-length, #project-tools, #project-year{
+                    display: flex;
+                    line-height: 2.5vw;
                 }
 
-                table tr:last-of-type {
-                    transform: translateY(1.4vh);
+                #project-title {
+                    font-size: var(--subtitle-height);
+                    line-height: 2.5vw;
+                    margin-bottom: 2.5vw;
+                }
+
+                #project-description {
+                    margin-top: 2.5vw;
+                }
+
+                .project-label {
+                    min-width: 6vw;
                 }
             `,
     ]
@@ -69,26 +79,23 @@ export class DefaultProjectPopup extends ProjectPopup {
                 navbar="true"
                 duration="0"
             ></multimedia-slideshow>
-            <table>
-                <tr>
-                    <td colspan="2" id="title">${this.title}</td>
-                </tr>
-                <tr>
-                    <td>Year:</td>
-                    <td>${this.year}</td>
-                </tr>
-                <tr>
-                    <td>Length:</td>
-                    <td>${this.length}</td>
-                </tr>
-                <tr>
-                    <td>Tools:</td>
-                    <td>${this.tools}</td>
-                </tr>
-                <tr>
-                    <td colspan="2">${this.description}</td>
-                </tr>
-            </table>​
+
+            <div id="project-details-pane">
+                <div id="project-title">${this.title}</div>
+                <div id="project-year">
+                    <div class="project-label">Year:</div>
+                    <div class="project-detail">${this.year}</div>
+                </div>
+                <div id="project-length">
+                    <div class="project-label">Length:</div>
+                    <div class="project-detail">${this.length}</div>
+                </div>
+                <div id="project-tools">
+                    <div class="project-label">Tools:</div>
+                    <div class="project-detail">${this.tools}</div>
+                </div>
+                <div id="project-description">${this.description}</div>
+            </div>
         `;
     }
 }

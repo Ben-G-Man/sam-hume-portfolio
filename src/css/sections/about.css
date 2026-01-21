@@ -9,20 +9,6 @@
     margin-left: 6vw;
 }
 
-@font-face {
-    font-family: 'HelveticaThermal';
-    src: url('/public/fonts/HelveticaThermalLight.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'HelveticaThermal';
-    src: url('/public/fonts/HelveticaThermalRegular.woff2') format('woff2');
-    font-weight: bold;
-    font-style: normal;
-}
-
 #about #about-text-container {
     position: absolute;
     width: 56vw;

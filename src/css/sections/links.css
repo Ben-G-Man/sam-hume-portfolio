@@ -7,6 +7,17 @@
     margin-bottom: -13%;
 }
 
+#links-text {
+    z-index: 1;
+    position: absolute;
+    width: 80%;
+    top: 20vw;
+    left: 10%;
+    height: 11vw;
+    display: flex;
+    align-items: center;
+}
+
 #inactive-region-top {
     height: 53%;
     width: 100%;
@@ -16,7 +27,7 @@
 #inactive-region-left {
     position: absolute;
     width: 11.2%;
-    height: 39%;
+    height: 47%;
     top: 53%;
     left: 11.5%;
 }
@@ -24,7 +35,7 @@
 #inactive-region-right {
     position: absolute;
     width: 11.2%;
-    height: 39%;
+    height: 47%;
     top: 53%;
     right: 22.1%;
 }

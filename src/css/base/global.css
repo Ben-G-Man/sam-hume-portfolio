@@ -1,7 +1,23 @@
+@font-face {
+    font-family: 'HelveticaThermal';
+    src: url('/public/fonts/HelveticaThermalLight.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'HelveticaThermal';
+    src: url('/public/fonts/HelveticaThermalRegular.woff2') format('woff2');
+    font-weight: bold;
+    font-style: normal;
+}
+
 body {
     height: 100vh;
     overflow: hidden;
     background-color: #101010;
+    font-size: var(--text-height);
+    font-family: 'HelveticaThermal', sans-serif;
 }
 
 main {

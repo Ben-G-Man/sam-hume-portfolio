@@ -73,6 +73,8 @@ export class DefaultSlideshow extends LitElement {
     `;
 
     firstUpdated() {
+        super.firstUpdated();
+        
         this.slidesContainer = this.renderRoot.querySelector(".slides");
 
         this.userSlides = Array.from(this.children);
