@@ -18,7 +18,7 @@
 }
 
 #exit-button {
-    width: 150px;
+    width: calc(7 * var(--cw));
     aspect-ratio: 1/1;
     position: absolute;
     top: 5%;

@@ -32,8 +32,8 @@ export class DefaultProjectPopup extends ProjectPopup {
 
                 multimedia-slideshow {
                     position: absolute;
-                    right: 10%;
-                    width: 55%;
+                    right: calc(10 * var(--cw));
+                    width: calc(55 * var(--cw));
                     aspect-ratio: 1 / 1;
                     top: 50%;
                     transform: translateY(-55%);
@@ -41,30 +41,30 @@ export class DefaultProjectPopup extends ProjectPopup {
                     
                 #project-details-pane {
                     position: absolute;
-                    left: 12.7vw;
+                    left: calc(12.7 * var(--cw));
                     /* This calc keeps the top of the text in line with the top of the space allocated in the background art */
-                    top: calc(50% - 20.3vw);
-                    width: 19vw;
+                    top: calc(50% - 20.3 * var(--cw));
+                    width: calc(19 * var(--cw));
                     font-size: var(--text-height);
                 }
 
                 #project-length, #project-tools, #project-year{
                     display: flex;
-                    line-height: 2.5vw;
+                    line-height: calc(2.5 * var(--cw));
                 }
 
                 #project-title {
                     font-size: var(--subtitle-height);
-                    line-height: 2.5vw;
-                    margin-bottom: 2.5vw;
+                    line-height: calc(2.5 * var(--cw));
+                    margin-bottom: calc(2.5 * var(--cw));
                 }
 
                 #project-description {
-                    margin-top: 2.5vw;
+                    margin-top: calc(2.5 * var(--cw));
                 }
 
                 .project-label {
-                    min-width: 6vw;
+                    min-width: calc(6 * var(--cw));
                 }
             `,
     ]

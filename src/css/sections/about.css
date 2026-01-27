@@ -1,19 +1,19 @@
 #dancing-cubes {
-    width: 80vw;
-    margin-left: 10vw;
-    margin-top: -4vw;
+    width: calc(80 * var(--cw));
+    margin-left: calc(10 * var(--cw));
+    margin-top: calc(-4 * var(--cw));
 }
 
 #about .main-image {
-    width: 88vw;
-    margin-left: 6vw;
+    width: calc(88 * var(--cw));
+    margin-left: calc(6 * var(--cw));
 }
 
 #about #about-text-container {
     position: absolute;
-    width: 56vw;
-    left: 22vw;
-    top: 18.5vw;
+    width: calc(56 * var(--cw));
+    left: calc(22 * var(--cw));
+    top: calc(18.5 * var(--cw));
     font-size: var(--text-height);
     font-family: 'HelveticaThermal', sans-serif;
 }
@@ -35,15 +35,15 @@
 }
 
 #about #about-text-container #skills {
-    width: 20vw;
+    width: calc(20 * var(--cw));
 }
 
 #about #about-text-container #fast-facts {
-    width: 50vw;
+    width: calc(50 * var(--cw));
 }
 
 #about #about-text-container #education {
-    margin-top: 5vw;
+    margin-top: calc(5 * var(--cw));
     grid-column: 1 / -1;
 }
 

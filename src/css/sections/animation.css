@@ -1,8 +1,8 @@
 .animation-slideshow {
     aspect-ratio: 2 / 1;
-    margin-bottom: 10vw;
+    margin-bottom: calc(10 * var(--cw));
 }
 
 #animation {
-    margin-top: -4vw;
+    margin-top: calc(-4 * var(--cw));
 }

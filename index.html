@@ -11,6 +11,33 @@
     <!-- Preloading -->
     <link rel="preload"
         href="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/loading animation white.gif"
+    as="image">
+    <link rel="preload"
+        href="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/landing/face-melt-1.webp"
+    as="image">
+    <link rel="preload"
+        href="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/landing/face-melt-2.webp"
+    as="image">
+    <link rel="preload"
+        href="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/landing/face-melt-3.webp"
+    as="image">
+    <link rel="preload"
+        href="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/landing/face-melt-4.webp"
+    as="image">
+    <link rel="preload"
+        href="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/landing/face-melt-5.webp"
+    as="image">
+    <link rel="preload"
+        href="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/landing/face-melt-6.webp"
+    as="image">
+    <link rel="preload"
+        href="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/landing/face-melt-7.webp"
+    as="image">
+    <link rel="preload"
+        href="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/landing/face-melt-8.webp"
+    as="image">
+    <link rel="preload"
+        href="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/loading animation white.gif"
         as="image">
     <link rel="preload"
         href="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/button-left-red.webp"
@@ -70,7 +97,7 @@
         <div id="loading">
             <img id="loading-spinner"
                 src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/loading animation white.gif"
-                loading="eager" />
+            />
         </div>
 
         <div id="blur" class="stationary full-screen openable"></div>
@@ -202,7 +229,7 @@
                         <img style="position: absolute; height: 100%; pointer-events: none;"
                             src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/showreel-overlay-v3.webp"
                             loading="lazy" />
-                        <div style="position: absolute; bottom: 7vw; width: 70vw; left: 32vw;"><b>Project length:</b>&emsp;N/A<br /><br /><b>Year:</b>&emsp;2023-2024</div>
+                        <div style="position: absolute; bottom: calc(7 * var(--cw)); width: calc(70 * var(--cw)); left: calc(32 * var(--cw));"><b>Project length:</b>&emsp;N/A<br /><br /><b>Year:</b>&emsp;2023-2024</div>
                     </div>
 
                     <div class="animation-slide-content" style="position: relative; width: 100%; overflow: hidden;">
@@ -217,7 +244,7 @@
                         <img style="position: absolute; height: 100%; pointer-events: none;"
                             src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/capstone-overlay-v3.webp"
                             loading="lazy" />
-                        <div style="position: absolute; bottom: 7vw; width: 70vw; left: 32vw;"><b>Project length:</b>&emsp;6 months<br /><br /><b>Year:</b>&emsp;2024</div>
+                        <div style="position: absolute; bottom: calc(7 * var(--cw)); width: calc(70 * var(--cw)); left: calc(32 * var(--cw));"><b>Project length:</b>&emsp;6 months<br /><br /><b>Year:</b>&emsp;2024</div>
                     </div>
 
                     <div class="animation-slide-content" style="position: relative; width: 100%; overflow: hidden;">
@@ -232,7 +259,7 @@
                         <img style="position: absolute; height: 100%; pointer-events: none;"
                             src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/bis-overlay-v3.webp"
                             loading="lazy" />
-                        <div style="position: absolute; bottom: 7vw; width: 70vw; left: 32vw;"><b>Project length:</b>&emsp;1.5 weeks<br /><br /><b>Year:</b>&emsp;2024</div>
+                        <div style="position: absolute; bottom: calc(7 * var(--cw)); width: calc(70 * var(--cw)); left: calc(32 * var(--cw));"><b>Project length:</b>&emsp;1.5 weeks<br /><br /><b>Year:</b>&emsp;2024</div>
                     </div>
 
                 </interactive-slideshow>
@@ -272,14 +299,15 @@
 
                 </div>
 
-                <img class="main-image"
+                <img
+                    class="full-width"
                     id="click-my-links"
                     src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/links/click my links2.gif"
                     loading="lazy">
             </div>
 
             <!-- Footer -->
-            <div class="section" id="footer">
+            <div class="section full-width" id="footer">
                 <img class="main-image"
                     id="footer"
                     src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/footer.webp"

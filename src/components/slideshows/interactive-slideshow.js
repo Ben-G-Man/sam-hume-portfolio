@@ -21,8 +21,8 @@ export class InteractiveSlideshow extends DefaultSlideshow {
 
             button {
                 position: absolute;
-                width: 13vw;
-                height: 13vw;
+                width: calc(13 * var(--cw));
+                height: calc(13 * var(--cw));
                 border: 0;
                 top: 50%;
                 transform: translateY(-50%);
@@ -34,19 +34,19 @@ export class InteractiveSlideshow extends DefaultSlideshow {
             }
 
             #prev.scribble {
-                left: -3vw;
+                left: calc(-3 * var(--cw));
             }
 
             #next.scribble {
-                right: -3vw;
+                right: calc(-3 * var(--cw));
             }
 
             #prev.tape {
-                left: 3vw;
+                left: calc(3 * var(--cw));
             }
 
             #next.tape {
-                right: 3vw;
+                right: calc(3 * var(--cw));
             }
 
             button.tape {

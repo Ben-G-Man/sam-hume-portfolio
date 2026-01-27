@@ -27,7 +27,6 @@ export class DefaultSlideshow extends LitElement {
     static styles = css`
         :host {
             display: block;
-            overflow: hidden;
             position: relative;
         }
 

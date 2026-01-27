@@ -1,7 +1,7 @@
 #landing {
     width: 100%;
     padding-top: 40px;
-    padding-bottom: 6vw;
+    padding-bottom: calc(6 * var(--cw));
 }
 
 #landing-background {
@@ -12,5 +12,5 @@
     position: absolute;
     width: 74%;
     left: 13%;
-    top: 16vw;
+    top: calc(16 * var(--cw));
 }

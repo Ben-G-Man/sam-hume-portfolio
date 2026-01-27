@@ -23,12 +23,12 @@ export class NavbarSlideshow extends DefaultSlideshow {
             #navbar {
                 position: absolute;
                 bottom: 0;
-                height: 6vw;
+                height: calc(6 * var(--cw));
                 left: 50%;
                 transform: translate(-50%, -50%);
                 display: flex;
                 justify-content: space-between;
-                gap: 1vw;
+                gap: calc(1 * var(--cw));
             }
 
             .navbarSlide {
@@ -43,8 +43,8 @@ export class NavbarSlideshow extends DefaultSlideshow {
             }
 
             button {
-                width: 6vw;
-                height: 6vw;
+                width: calc(6 * var(--cw));
+                aspect-ratio: 1/1;
                 border: 0;
                 bottom: 0;
                 background: transparent;

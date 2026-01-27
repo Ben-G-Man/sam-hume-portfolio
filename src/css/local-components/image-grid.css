@@ -1,8 +1,8 @@
 .image-grid {
     position: absolute;
     top: 20%;
-    left: 20vw;
-    width: 60vw;
+    left: calc(20 * var(--cw));
+    width: calc(60 * var(--cw));
     aspect-ratio: 3 / 4;
     display: grid;
     grid-template-columns: repeat(2, 1fr);

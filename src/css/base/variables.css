@@ -1,6 +1,16 @@
 :root {
-    --background-slice-width: 1920;
-    --background-slice-height: 3116;
-    --subtitle-height: 3vw;
-    --text-height: 2vw;
+    --cw: 1vw; /* Content Width */
+}
+
+@media (min-aspect-ratio: 16/9) {
+  :root {
+    /* Ensures content aspect ratio is never wider than 16:9 */
+    --cw: calc(1vh * 16 / 9);
+  }
+}
+
+:root {
+    --subtitle-height: calc(3 * var(--cw));
+    --text-height: calc(2 * var(--cw));
+    --content-margin: calc((100vw - var(--cw) * 100) / 2);
 }

@@ -1,12 +1,11 @@
 #main-stack {
     top: 0;
-    left: 0;
-    width: 100%;
+    left: var(--content-margin);
+    width: calc(100 * var(--cw));
     position: relative;
     display: block;
     flex-direction: column;
     gap: 20vh;
-    overflow: hidden;
 }
 
 #main-stack > * {
@@ -16,4 +15,9 @@
 .main-image,
 section {
     width: 100%;
+}
+
+.full-width {
+    width: 100vw;
+    margin-left: calc(var(--content-margin) * -1);
 }

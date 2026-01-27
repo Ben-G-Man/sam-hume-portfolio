@@ -7,7 +7,8 @@ export class ProjectPopup extends LitElement {
 
     static styles = css`
         .popup-container {
-            width: 100%;
+            width: calc(100 * var(--cw));
+            margin-left: var(--content-margin);
             height: 100%;
             position: relative;
             display: flex;
@@ -15,7 +16,7 @@ export class ProjectPopup extends LitElement {
         }
 
         #exit-button {
-            width: 150px;
+            width: calc(7 * var(--cw));
             aspect-ratio: 1/1;
             position: absolute;
             top: 5%;

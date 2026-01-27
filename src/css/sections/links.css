@@ -11,9 +11,9 @@
     z-index: 1;
     position: absolute;
     width: 80%;
-    top: 20vw;
+    top: calc(20 * var(--cw));
     left: 10%;
-    height: 11vw;
+    height: calc(11 * var(--cw));
     display: flex;
     align-items: center;
 }
@@ -47,5 +47,5 @@ interactive-slice {
 }
 
 #click-my-links {
-    margin-top: -5vw;
+    margin-top: calc(-5 * var(--cw));
 }
