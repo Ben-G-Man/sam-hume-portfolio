@@ -6,7 +6,7 @@
     display: block;
     flex-direction: column;
     gap: 20vh;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 
 #main-stack > * {

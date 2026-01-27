@@ -47,9 +47,5 @@ interactive-slice {
 }
 
 #click-my-links {
-    transform: translateY(-5vw);
-}
-
-#footer {
-
+    margin-top: -5vw;
 }
