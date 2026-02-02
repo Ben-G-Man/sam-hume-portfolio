@@ -50,4 +50,4 @@ export class DigitalArtPopup extends ProjectPopup {
     }
 }
 
-customElements.define("digital-v2-art-popup", DigitalArtPopup);
+customElements.define("digital-art-popup", DigitalArtPopup);
