@@ -32,10 +32,10 @@ export class DefaultProjectPopup extends ProjectPopup {
 
                 multimedia-slideshow {
                     position: absolute;
-                    right: calc(10 * var(--cw));
-                    width: calc(55 * var(--cw));
-                    aspect-ratio: 1 / 1;
-                    top: 50%;
+                    right: calc(5 * var(--cw));
+                    width: calc(65 * var(--cw));
+                    aspect-ratio: 5 / 4;
+                    top: 53%;
                     transform: translateY(-55%);
                 }
                     

@@ -10,7 +10,7 @@ let displayedFrame = 1;
 let lastFrameTime = 0;
 
 const currentFrame = (i) =>
-    `https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/landing/face-melt-${i}.webp`;
+    `https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/landing/face-melt-v2-${i}.webp`;
 
 function updateImage(index) {
     img.src = currentFrame(index);

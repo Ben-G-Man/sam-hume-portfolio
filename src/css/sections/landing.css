@@ -14,3 +14,15 @@
     left: 13%;
     top: calc(16 * var(--cw));
 }
+
+@media (max-aspect-ratio: 1/1) {
+    #landing {
+        padding-top: 0;
+        margin-top: -10vw;
+    }
+
+    #landing-background {
+        margin-left: -16vw;
+        width: 132vw;
+    }
+}

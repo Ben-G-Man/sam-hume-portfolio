@@ -43,7 +43,7 @@ export class NavbarSlideshow extends DefaultSlideshow {
             }
 
             button {
-                width: calc(6 * var(--cw));
+                width: calc(8 * var(--cw));
                 aspect-ratio: 1/1;
                 border: 0;
                 bottom: 0;
