@@ -25,4 +25,10 @@
         margin-left: -16vw;
         width: 132vw;
     }
+
+    #face-melt {
+        width: 100%;
+        left: 0;
+        top: 25vw;
+    }
 }

@@ -17,9 +17,17 @@ function updateImage(index) {
 }
 
 function getScrollMetrics() {
-    const viewport = main.clientHeight;
+    const width = main.clientWidth;
+    const height = main.clientHeight;
 
-    // animation runs between 15% and 60% of the visible viewport
+    let viewport = width * 0.8;
+
+    const aspectRatio = width / height;
+
+    if (aspectRatio > 1) {
+        viewport = width * 0.6;
+    }
+
     const start = viewport * 0.15;
     const end = viewport;
 
