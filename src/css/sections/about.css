@@ -49,7 +49,7 @@
 
 /* Mobile Layout */
 
- @media (max-aspect-ratio: 1/1) {
+ @media (orientation: portrait) {
     #about #about-text-container {
         display: block;
     }

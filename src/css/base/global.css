@@ -20,14 +20,24 @@ body {
     font-family: 'HelveticaThermal', sans-serif;
 }
 
-@media (max-aspect-ratio: 1/1) {
-    body {
-        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    }
-}
-
 main {
     height: 100vh;
     overflow-y: scroll;
     overflow-x: hidden;
+}
+
+/* Mobile Layout */
+
+@media (orientation: portrait) {
+    .desktop {
+        display: none !important;
+    }
+}
+
+/* Desktop Layout */
+
+@media (orientation: landscape) {
+    .mobile {
+        display: none !important;
+    }
 }
