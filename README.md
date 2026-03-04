@@ -13,6 +13,7 @@ This site is an excellent showcase of the intersection between **web-tech** and 
 - This site depends on [Lit](https://lit.dev/) for light-weight component support.
 - Each time this repository is updated a GitHub action is triggered which regenerates any affected files.
 - These files are served to [ben-g-man.github.io/sam-hume-portfolio](https://ben-g-man.github.io/sam-hume-portfolio) via GitHub pages.
+- Images, videos, and fonts are stored in a [seperate repo](https://github.com/Ben-G-Man/sam-hume-portfolio-assets) and cached via [jsDelivr](https://www.jsdelivr.com/) to improve loading times as the website is image-heavy. 
 - Finally, the domain [samhume-portfolio.space](https://www.samhume-portfolio.space) points to the content served via GitHub pages.
 - Currently, regenerating the site takes ~30s.
 
