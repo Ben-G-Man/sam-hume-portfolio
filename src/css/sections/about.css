@@ -29,38 +29,60 @@
 
 /* Desktop Layout */
 
-#about #about-text-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
+@media (orientation: landscape) {
+    #about #about-text-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
 
-#about #about-text-container #skills {
-    width: calc(20 * var(--cw));
-}
+    #about #about-text-container #skills {
+        width: calc(20 * var(--cw));
+    }
 
-#about #about-text-container #fast-facts {
-    width: calc(50 * var(--cw));
-}
+    #about #about-text-container #fast-facts {
+        width: calc(50 * var(--cw));
+    }
 
-#about #about-text-container #education {
-    margin-top: calc(5 * var(--cw));
-    grid-column: 1 / -1;
+    #about #about-text-container #education {
+        margin-top: calc(5 * var(--cw));
+        grid-column: 1 / -1;
+    }
 }
 
 /* Mobile Layout */
 
- @media (orientation: portrait) {
+@media (orientation: portrait) {
     #about #about-text-container {
+        top: calc(30 * var(--cw));
         display: block;
     }
 
     #about #about-text-container section {
-        margin-bottom: 1rem;
+        margin-bottom: calc(1 * var(--cw));
+    }
+
+    #about #about-text-container #skills,
+    #about #about-text-container #fast-facts,
+    #about #about-text-container #education {
+        width: auto;
+        margin-top: 0;
     }
 
     #about #about-text-container #skills ul {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 0.5rem;
+        gap: calc(1 * var(--cw));
+    }
+
+    #dancing-cubes {
+        width: calc(50 * var(--cw));
+        margin-left: calc(5 * var(--cw));
+        /*  
+            Image cannot be moved out of the containing picture,
+            (I.e., beyond -100%, hence we translate it up by 5%
+            to align it visually with the rest of the section.
+        */
+        margin-top: calc(-50 * var(--cw));
+        transform: translateY(-5%)
     }
 }

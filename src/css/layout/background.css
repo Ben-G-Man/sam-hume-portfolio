@@ -4,7 +4,7 @@
     z-index: -1;
     width: 100vw;
     height: 100vh;
-    background-image: url("https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/blackground/blackground.webp");
+    background-image: url("https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/global/blackground.webp");
     background-repeat: repeat-y;
     background-size: 100vw auto;
 }

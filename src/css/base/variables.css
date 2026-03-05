@@ -9,8 +9,18 @@
   }
 }
 
-:root {
-    --subtitle-height: calc(3 * var(--cw));
-    --text-height: calc(2 * var(--cw));
-    --content-margin: calc((100vw - var(--cw) * 100) / 2);
+@media (orientation: landscape) {
+    :root {
+        --subtitle-height: calc(3 * var(--cw));
+        --text-height: calc(2 * var(--cw));
+        --content-margin: calc((100vw - var(--cw) * 100) / 2);
+    }
+}
+
+@media (orientation: portrait) {
+    :root {
+        --subtitle-height: calc(5 * var(--cw));
+        --text-height: calc(3 * var(--cw));
+        --content-margin: calc((100vw - var(--cw) * 100) / 2);
+    }
 }

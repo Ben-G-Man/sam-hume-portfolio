@@ -60,19 +60,19 @@ export class InteractiveSlideshow extends DefaultSlideshow {
             }
 
             #prev.tape {
-                background-image: url(https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/button-left-red.webp);
+                background-image: url(https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/global/buttons/tape-left.webp);
             }
 
             #next.tape {
-                background-image: url(https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/animation/button-right-red.webp);
+                background-image: url(https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/global/buttons/tape-right.webp);
             }
 
             button.scribble {
-                background-image: url(https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow_1.webp);
+                background-image: url(https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/global/buttons/scribble.webp);
             }
 
             button.scribble:hover {
-                background-image: url(https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow_2.gif);
+                background-image: url(https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/global/buttons/scribble-hover.gif);
             }
 
             #next.scribble {

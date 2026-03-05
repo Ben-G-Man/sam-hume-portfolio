@@ -12,70 +12,121 @@ export class DefaultProjectPopup extends ProjectPopup {
         slideCount: { type: Number },
         standardSuffix: { type: String },
         video: { type: String },
+        navBar: { type: Boolean },
     };
     
     constructor() {
         super();
         this.standardSuffix = ".webp";
         this.videos = [];
+        this.navBar = false;
+    }
+
+    connectedCallback() {
+        super.connectedCallback();
+
+        this._orientationQuery = window.matchMedia("(orientation: landscape)");
+
+        this._orientationHandler = (e) => {
+            this.navBar = e.matches;
+        };
+
+        this.navBar = this._orientationQuery.matches;
+
+        this._orientationQuery.addEventListener("change", this._orientationHandler);
+    }
+
+    disconnectedCallback() {
+        this._orientationQuery?.removeEventListener("change", this._orientationHandler);
+        super.disconnectedCallback();
     }
 
     static styles = [
-            ProjectPopup.styles,
-            css`
+        ProjectPopup.styles,
+        css`
+            picture {
+                position: absolute;
+                top: 0;
+                left: 0;
+                overflow: visible;
+            }
+
+            #background {
+                position: relative;
+                left: calc(50 * var(--cw));
+                top: 50vh;
+                transform: translateX(-50%) translateY(-50%);
+            }
+
+            @media (orientation: landscape) {
                 #background {
-                    width: 90%;
-                    position: absolute;
-                    left: 50%;
-                    transform: translateX(-50%);
+                    width: calc(90 * var(--cw));
                 }
+            }
 
-                multimedia-slideshow {
-                    position: absolute;
-                    right: calc(5 * var(--cw));
-                    width: calc(65 * var(--cw));
-                    aspect-ratio: 5 / 4;
-                    top: 53%;
-                    transform: translateY(-55%);
+            @media (orientation: portrait) {
+                #background {
+                    height: 100vh;
                 }
-                    
-                #project-details-pane {
-                    position: absolute;
-                    left: calc(12.7 * var(--cw));
-                    /* This calc keeps the top of the text in line with the top of the space allocated in the background art */
-                    top: calc(50% - 20.3 * var(--cw));
-                    width: calc(19 * var(--cw));
-                    font-size: var(--text-height);
-                }
+            }
 
-                #project-length, #project-tools, #project-year{
-                    display: flex;
-                    line-height: calc(2.5 * var(--cw));
-                }
+            multimedia-slideshow {
+                position: absolute;
+                right: calc(5 * var(--cw));
+                width: calc(65 * var(--cw));
+                aspect-ratio: 5 / 4;
+                top: 53%;
+                transform: translateY(-55%);
+            }
+                
+            #project-details-pane {
+                position: absolute;
+                left: calc(12.7 * var(--cw));
+                top: calc(50% - 20.3 * var(--cw));
+                width: calc(19 * var(--cw));
+                font-size: var(--text-height);
+            }
 
-                #project-title {
-                    font-size: var(--subtitle-height);
-                    line-height: calc(2.5 * var(--cw));
-                    margin-bottom: calc(2.5 * var(--cw));
-                }
+            #project-length, #project-tools, #project-year{
+                display: flex;
+                line-height: calc(2.5 * var(--cw));
+            }
 
-                #project-description {
-                    margin-top: calc(2.5 * var(--cw));
-                }
+            #project-title {
+                font-size: var(--subtitle-height);
+                line-height: calc(2.5 * var(--cw));
+                margin-bottom: calc(2.5 * var(--cw));
+            }
 
-                .project-label {
-                    min-width: calc(6 * var(--cw));
-                }
-            `,
-    ]
+            #project-description {
+                margin-top: calc(2.5 * var(--cw));
+            }
+
+            .project-label {
+                min-width: calc(6 * var(--cw));
+            }
+        `,
+    ];
 
     renderExtraContent() {
         return html`
-            <img loading="lazy" id="background" src='https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/background-squared-paper.webp' />
+            <picture>
+                <source
+                    media="(orientation: portrait)"
+                    srcset="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/sections/misc-works/background-popup-mobile.webp">
+                <img
+                    loading="lazy"
+                    id="background"
+                    src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/sections/misc-works/background-popup.webp">
+            </picture>
+
             <multimedia-slideshow
-                .images=${Array.from({ length: this.slideCount}, (_, i) => `${this.slideDeckPrefixPath}${i + 1}${this.standardSuffix}`)}
+                .images=${Array.from(
+                    { length: this.slideCount },
+                    (_, i) => `${this.slideDeckPrefixPath}${i + 1}${this.standardSuffix}`
+                )}
                 .video=${this.video}
-                navbar="true"
+                ?navbar=${this.navBar}
                 duration="0"
             ></multimedia-slideshow>
 

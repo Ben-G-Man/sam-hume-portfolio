@@ -1,33 +1,42 @@
 .image-grid {
     position: absolute;
     top: 20%;
-    left: calc(20 * var(--cw));
-    width: calc(60 * var(--cw));
-    aspect-ratio: 3 / 4;
+    left: calc(15 * var(--cw));
+    width: calc(70 * var(--cw));
+    height: calc(70 * var(--cw));
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    place-items: center;
 }
 
 .image-grid img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
+    width: 90%;
+    aspect-ratio: 1/1;
+    object-fit: cover;
     display: block;
     pointer-events: all;
 }
 
-.image-grid img:not(.wip) {
-    cursor: pointer;
-    filter: grayscale(100%);
-    transition: 0.3s;
+@media (orientation: landscape) {
+    .image-grid img {
+        cursor: pointer;
+        filter: grayscale(100%);
+        transition: 0.3s;
+    }
+
+    .image-grid img:hover {
+        filter: grayscale(0%);
+        transition: 0.3s;
+    }
 }
 
-.image-grid img:not(.wip):hover {
-    filter: grayscale(0%);
-    transition: 0.3s;
-}
+/* Mobile */
 
-.image-grid img.wip {
-    cursor: not-allowed;
+@media (orientation: portrait) {
+    .image-grid img {
+        width: 120%;
+        aspect-ratio: 1/1;
+        margin-top: -10%
+    }
 }

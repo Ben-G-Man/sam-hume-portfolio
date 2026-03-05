@@ -51,12 +51,12 @@ export class NavbarSlideshow extends DefaultSlideshow {
                 background-size: contain;
                 background-repeat: no-repeat;
                 background-position: center;
-                background-image: url(https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow_1.webp);
+                background-image: url(https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/global/buttons/scribble.webp);
                 cursor: pointer;
             }
 
             button:hover {
-                background-image: url(https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/project-popups/arrow_2.gif);
+                background-image: url(https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/global/buttons/scribble-hover.gif);
             }
 
             #prev {

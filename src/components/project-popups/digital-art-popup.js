@@ -5,16 +5,16 @@ export class DigitalArtPopup extends ProjectPopup {
     constructor() {
         super();
 
+        // TODO: Hardcode in auto-replacing MED_RES with HIGH_RES once we have MED_RES and HIGH_RES alternatives 
         this.slideshowImages = [
-            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/other digital art/digital-v2-1.webp",
-            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/other digital art/digital-v2-2.webp",
-            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/other digital art/digital-v2-3.webp",
-            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/other digital art/digital-v2-4.webp",
-            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/other digital art/digital-v2-5.webp",
-            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/other digital art/digital-v2-6.webp",
-            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/other digital art/digital-v2-7.webp",
-            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/other digital art/digital-v2-8.webp",
-            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/other digital art/digital-v2-9.webp",
+            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/sections/misc-works/digital-art/1.webp",
+            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/sections/misc-works/digital-art/2.webp",
+            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/sections/misc-works/digital-art/3.webp",
+            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/sections/misc-works/digital-art/4.webp",
+            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/sections/misc-works/digital-art/5.webp",
+            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/sections/misc-works/digital-art/6.webp",
+            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/sections/misc-works/digital-art/7.webp",
+            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/sections/misc-works/digital-art/8.webp",
         ];
     }
 
@@ -40,11 +40,11 @@ export class DigitalArtPopup extends ProjectPopup {
 
     renderExtraContent() {
         return html`
-            <img src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/other digital art/other-digital-art.webp" />
+            <img src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/sections/misc-works/digital-art/background.webp" />
             <multimedia-slideshow
                 .images=${this.slideshowImages}
                 duration="0"
-                navbar="true"
+                navbar
             ></multimedia-slideshow>
         `;
     }

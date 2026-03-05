@@ -7,9 +7,9 @@ export class SketchbookPopup extends ProjectPopup {
         super();
 
         this.slideshowImages = [
-            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/sketchbooks/sb-1.webp",
-            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/sketchbooks/sb-2.webp",
-            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/sketchbooks/sb-3.webp",
+            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/sections/misc-works/sketchbook/1.webp",
+            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/sections/misc-works/sketchbook/2.webp",
+            "https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/sections/misc-works/sketchbook/3.webp",
         ];
     }
 
@@ -35,7 +35,7 @@ export class SketchbookPopup extends ProjectPopup {
 
     renderExtraContent() {
         return html`
-            <img src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio@main/public/images/misc-works/sketchbooks/sketchbook-layout.webp" />
+            <img src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/sections/misc-works/sketchbook/background.webp" />
             <multimedia-slideshow
                 travel="0.5"
                 .images=${this.slideshowImages}
