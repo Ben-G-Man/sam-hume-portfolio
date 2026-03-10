@@ -58,9 +58,42 @@ export class DefaultProjectPopup extends ProjectPopup {
                 transform: translateX(-50%) translateY(-50%);
             }
 
+            #project-details-pane {
+                position: absolute;
+                font-size: var(--text-height);
+            }
+
+            #project-title {
+                font-size: var(--subtitle-height);
+            }
+
             @media (orientation: landscape) {
                 #background {
                     width: calc(90 * var(--cw));
+                }
+
+                #project-details-pane {
+                    left: calc(12.7 * var(--cw));
+                    top: calc(50% - 20.3 * var(--cw));
+                    width: calc(19 * var(--cw));
+                }
+
+                #project-length, #project-tools, #project-year{
+                    display: flex;
+                    line-height: calc(2.5 * var(--cw));
+                }
+
+                #project-title {
+                    line-height: calc(2.5 * var(--cw));
+                    margin-bottom: calc(2.5 * var(--cw));
+                }
+
+                #project-description {
+                    margin-top: calc(2.5 * var(--cw));
+                }
+
+                .project-label {
+                    min-width: calc(6 * var(--cw));
                 }
             }
 
@@ -77,33 +110,6 @@ export class DefaultProjectPopup extends ProjectPopup {
                 aspect-ratio: 5 / 4;
                 top: 53%;
                 transform: translateY(-55%);
-            }
-                
-            #project-details-pane {
-                position: absolute;
-                left: calc(12.7 * var(--cw));
-                top: calc(50% - 20.3 * var(--cw));
-                width: calc(19 * var(--cw));
-                font-size: var(--text-height);
-            }
-
-            #project-length, #project-tools, #project-year{
-                display: flex;
-                line-height: calc(2.5 * var(--cw));
-            }
-
-            #project-title {
-                font-size: var(--subtitle-height);
-                line-height: calc(2.5 * var(--cw));
-                margin-bottom: calc(2.5 * var(--cw));
-            }
-
-            #project-description {
-                margin-top: calc(2.5 * var(--cw));
-            }
-
-            .project-label {
-                min-width: calc(6 * var(--cw));
             }
         `,
     ];
