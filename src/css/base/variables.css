@@ -11,6 +11,7 @@
 
 @media (orientation: landscape) {
     :root {
+        --title-height: calc(4.5 * var(--cw));
         --subtitle-height: calc(3 * var(--cw));
         --text-height: calc(2 * var(--cw));
         --content-margin: calc((100vw - var(--cw) * 100) / 2);
@@ -19,6 +20,7 @@
 
 @media (orientation: portrait) {
     :root {
+        --title-height: calc(10 * var(--cw));
         --subtitle-height: calc(5 * var(--cw));
         --text-height: calc(3 * var(--cw));
         --content-margin: calc((100vw - var(--cw) * 100) / 2);
