@@ -24,6 +24,10 @@ jobs:
       - name: Build
         run: npm run build
 
+      # Add CNAME file before deployment
+      - name: Add CNAME for custom domain
+        run: echo "www.samhume-portfolio.space" > ./dist/CNAME
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
@@ -33,4 +37,3 @@ jobs:
           force_orphan: true
           commit_message: "Automated deploy from GitHub Actions"
           clean: true
-
