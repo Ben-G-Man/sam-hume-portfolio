@@ -10,6 +10,16 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: rgb(126, 16, 16);
     text-decoration: none;
+}
+
+#footer span {
+    display: inline-flex;
+    align-items: center;
+    height: calc(5 * var(--cw));
+    color: #C8382C;
+}
+
+#dev-link{
+    height: calc(5 * var(--cw));
 }

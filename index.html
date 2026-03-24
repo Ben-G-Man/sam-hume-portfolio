@@ -82,11 +82,14 @@
     <main>
         <div id="main-background"></div>
 
-        <!-- Stationary Content -->
+<!-- ######################## -->
+<!-- ## Stationary Content ## -->
+<!-- ######################## -->
 
         <div id="loading">
             <img id="loading-spinner"
                 src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/global/loader.gif" />
+            <div id="loading-text"><span>L</span><span>O</span><span>A</span><span>D</span><span>I</span><span>N</span><span>G</span></div>
         </div>
 
         <div id="blur" class="stationary full-screen openable"></div>
@@ -104,23 +107,25 @@
             video="https://www.youtube-nocookie.com/embed/5mCVunLeyKA?si=7T2l-uN7SQQpY6cU"></default-project-popup>
         <sketchbook-popup id="sketchbook-popup" class="stationary full-screen openable popup"></sketchbook-popup>
         <default-project-popup id="portfolio-popup" class="stationary full-screen openable popup"
-            title="PORTFOLIO DESIGN PROJECT" year="1041" length="millions of weeks" tools="Blender, Unreal Engine"
-            description="abcde."
+            title="PORTFOLIO DESIGN PROJECT" year="2025" length="Ongoing" tools="Photoshop, Figma, Physical Media"
+            description="The grungy, scanned-paper style of my portfolio reflects my creative roots. Whether in textbook margins or across bedroom furniture, art has always been my outlet. Building on this, I created two handwritten fonts and hand-drawn animations to bring life to the site."
             slideDeckPrefixPath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/sections/misc-works/portfolio/"
             slideCount="4"></default-project-popup>
         <default-project-popup id="pixel-art-popup" class="stationary full-screen openable popup"
-            title="SUPERHEAVY GAME ART" year="2023" length="12 weeks" tools="Blender, Unreal Engine"
-            description="abcde."
-            slideDeckPrefixPath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/sections/misc-works/super-heavy/"
-            slideCount="2"></default-project-popup>
+            title="SUPERHEAVY GAME ART" year="2024" length="1 week" tools="Aseprite, Unity"
+            description="I worked on the combat-puzzle game ‘superheavy’ with two friends during a 1 week game jam. I created all environment and player sprites in a pixel art style, focusing on clear animations and using colour language to convey tone."
+            slideDeckPrefixPath="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/sections/misc-works/superheavy/"
+            slideCount="5"></default-project-popup>
         <digital-art-popup id="misc-digital-art-popup"
             class="stationary full-screen openable popup"></digital-art-popup>
 
         <div id="main-stack">
 
-            <!-- Main Content Stack -->
+<!-- ######################## -->
+<!-- ## Main Content Stack ## -->
+<!-- ######################## -->
 
-            <!-- Landing -->
+    <!-- Landing -->
             <div class="section" id="landing">
                 <img id="landing-background"
                     src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/sections/landing/background.webp"
@@ -130,7 +135,7 @@
                     loading="eager" />
             </div>
 
-            <!-- About -->
+    <!-- About -->
             <div class="section" id="about">
 
                 <picture>
@@ -185,7 +190,7 @@
                 </div>
             </div>
 
-            <!-- Misc Works -->
+    <!-- Misc Works -->
             <div class="section" id="misc-works">
                 <picture>
                     <source media="(orientation: portrait)"
@@ -217,7 +222,7 @@
 
             </div>
 
-            <!-- Animation -->
+    <!-- Animation -->
             <div class="section" id="animation">
                 <img class="main-image"
                     src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/sections/animation/title.webp"
@@ -279,7 +284,7 @@
 
             </div>
 
-            <!-- Contacts -->
+    <!-- Contacts -->
             <div class="section" id="links">
                 <div id="desktop-links-container">
 
@@ -335,16 +340,19 @@
                 </picture>
             </div>
 
-            <!-- Footer -->
+    <!-- Footer -->
             <div class="section full-width" id="footer">
                 <img class="main-image" id="footer"
                     src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/sections/footer/background.webp"
                     loading="lazy">
-                <a href="https://ben-g-man.github.io">Website developed by&emsp;<u>Ben-G-Man</u>&emsp;(Benjamin
-                    Hume)</a>
+                <a href="https://ben-g-man.github.io"><span>Website developed by</span><img id="dev-link" src="https://cdn.jsdelivr.net/gh/Ben-G-Man/sam-hume-portfolio-assets@main/sections/footer/link.webp"/><span>(Benjamin Hume)</span></a>
             </div>
         </div>
     </main>
+
+<!-- ####################### -->
+<!-- ## Scripts & Imports ## -->
+<!-- ####################### -->
 
     <!-- Templates -->
     <template id="full-screen-template">
